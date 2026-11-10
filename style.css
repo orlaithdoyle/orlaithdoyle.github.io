@@ -1,0 +1,48 @@
+/* ============================================================
+   COLOURS AND FONT
+   Change a colour code below and it changes across the site.
+   Pick colours at https://htmlcolorcodes.com
+   ============================================================ */
+:root{
+  --background:#151a1e;   /* page background, dark slate */
+  --text:#e6eaec;         /* main writing */
+  --faded:#9aa6ad;        /* dates, captions and italic lines */
+  --links:#3cc6f2;        /* links, bright ocean blue */
+  --lines:#2f3a41;        /* the thin dividing lines */
+  --font:"Arvo", Georgia, serif;
+}
+
+/* ---- You shouldn't need to change anything below ---- */
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--background);color:var(--text);font-family:var(--font);font-size:1.05rem;line-height:1.75}
+.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.4rem 4rem}
+a{color:var(--links);text-underline-offset:.18em}
+a:hover{color:var(--text)}
+a:focus-visible{outline:2px solid var(--links);outline-offset:2px}
+
+header{border-bottom:1px solid var(--lines);padding-bottom:1rem;margin-bottom:2rem}
+.name{font-size:1.85rem;font-weight:700;margin:0;line-height:1.3}
+.name a{color:var(--text);text-decoration:none}
+.name small{font-size:1rem;font-weight:400;color:var(--faded);font-style:italic}
+nav{margin-top:.5rem;font-size:.98rem}
+nav a{margin-right:1rem;white-space:nowrap}
+nav a[aria-current=page]{color:var(--text);text-decoration:none;border-bottom:2px solid var(--links)}
+
+h1{font-size:1.6rem;margin:0 0 1rem}
+h2{font-size:1.25rem;margin:2.4rem 0 .5rem}
+h3{font-size:1.08rem;margin:1.8rem 0 .1rem}
+p{margin:0 0 1rem}
+em{color:var(--faded)}
+strong{color:var(--text)}
+ul{padding-left:1.2rem;margin:.3rem 0 1rem}
+li{margin-bottom:.35rem}
+main img{max-width:100%;height:auto;border:1px solid var(--lines);display:block;margin:1.2rem 0 .3rem}
+main img.portrait{float:left;width:10rem;margin:.35rem 1.6rem .8rem 0}
+main h2{clear:both}
+hr{border:0;border-top:1px solid var(--lines);margin:2.5rem 0 1.2rem;clear:both}
+footer{font-size:.92rem;color:var(--faded)}
+
+@media (max-width:600px){
+  body{font-size:1rem}
+  main img.portrait{float:none;width:9rem;margin:0 0 1.2rem}
+}
