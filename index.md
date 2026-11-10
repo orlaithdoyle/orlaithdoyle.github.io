@@ -11,6 +11,8 @@ Before that I did an MSc in Space Science and Technology at UCD and a BSc in Phy
 
 I'm looking for work in Earth observation, remote sensing or the space sector, in Ireland or elsewhere in Europe. My [CV is here](cv.pdf), and the easiest way to reach me is [by email](mailto:orlaithbdoyle@gmail.com).
 
+If you're hiring, my [quick answers page](faq.html) covers availability, location and right to work.
+
 <!-- To add a photo here, upload it to the photos folder and delete the arrows around this line:
 ![Me at ESTEC](photos/estec.jpg)
 *At ESTEC, Noordwijk, 2026.*
