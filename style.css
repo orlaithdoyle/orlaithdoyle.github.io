@@ -24,7 +24,7 @@ a:focus-visible{outline:2px solid var(--links);outline-offset:3px;border-radius:
 /* Two-column shell: fixed sidebar + reading column */
 .shell{display:grid;grid-template-columns:17rem minmax(0,1fr);min-height:100vh;max-width:66rem;margin:0 auto}
 .side{position:sticky;top:0;height:100vh;padding:3.2rem 2rem 2rem 2.2rem;border-right:1px solid var(--lines);
-  display:flex;flex-direction:column}
+  display:flex;flex-direction:column;overflow-y:auto}
 main{padding:3.4rem 3.5rem 3rem 4rem;max-width:46rem}
 
 /* Sidebar contents */
@@ -84,6 +84,18 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opa
     radial-gradient(1px 1px at 84% 31%,#fff 50%,transparent 51%),
     radial-gradient(1px 1px at 93% 79%,#ffe8c8 50%,transparent 51%);
   background-size:700px 700px}
+
+/* Shorter laptop screens: tighten the sidebar so everything fits */
+@media (min-width:861px) and (max-height:780px){
+  .side{padding-top:1.6rem;padding-bottom:1.2rem}
+  .mark{width:2rem;margin-bottom:.5rem}
+  .name{font-size:1.35rem}
+  .tagline{margin-top:.6rem}
+  .status{margin-top:.5rem}
+  nav{margin-top:1rem;padding-top:.7rem}
+  nav a{padding:.12rem 0 .12rem .9rem}
+  .contact{padding-top:1rem}
+}
 
 /* Phones and small tablets: sidebar becomes a header */
 @media (max-width:860px){
