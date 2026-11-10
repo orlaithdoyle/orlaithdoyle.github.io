@@ -4,12 +4,12 @@
    Pick colours at https://htmlcolorcodes.com
    ============================================================ */
 :root{
-  --background:#0c1322;   /* page background, deep night blue */
-  --panel:#111a2d;        /* the sidebar */
-  --text:#e8ecf2;         /* main writing */
-  --faded:#93a0b5;        /* dates, captions and italic lines */
+  --background:#120e2b;   /* page background, deep blue-purple */
+  --panel:#171236;        /* the sidebar */
+  --text:#ece9f8;         /* main writing */
+  --faded:#a59ec9;        /* dates, captions and italic lines */
   --links:#3cc6f2;        /* links, bright ocean blue */
-  --lines:#24304a;        /* the thin dividing lines */
+  --lines:#2c2656;        /* the thin dividing lines */
   --font:"Arvo", Georgia, serif;
 }
 
@@ -65,7 +65,7 @@ li::before{content:"";position:absolute;left:0;top:.72em;width:.42rem;height:.42
 main img{max-width:100%;height:auto;border:1px solid var(--lines);display:block;margin:1.6rem 0 .4rem;border-radius:4px}
 main img + em, main p:has(> img) + p:has(> em:only-child){font-size:.88rem}
 main img.portrait{width:9.5rem;aspect-ratio:1;object-fit:cover;border-radius:50%;margin:0 0 2rem;
-  box-shadow:0 0 0 6px var(--background),0 0 0 7px rgba(60,198,242,.45)}
+  box-shadow:0 0 0 6px transparent,0 0 0 7px rgba(60,198,242,.45)}
 
 /* Home page: the first paragraph reads as an introduction */
 main > p:first-of-type{font-size:1.18rem;line-height:1.65}
@@ -73,7 +73,7 @@ main > p:first-of-type{font-size:1.18rem;line-height:1.65}
 footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--lines);font-size:.82rem;color:var(--faded)}
 
 /* ---- Space touches ---- */
-body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opacity:.8;
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opacity:.9;
   background-image:
     radial-gradient(1px 1px at 7% 22%,#fff 50%,transparent 51%),
     radial-gradient(1px 1px at 18% 71%,#cfe6ff 50%,transparent 51%),
@@ -84,6 +84,8 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opa
     radial-gradient(1px 1px at 84% 31%,#fff 50%,transparent 51%),
     radial-gradient(1px 1px at 93% 79%,#ffe8c8 50%,transparent 51%);
   background-size:700px 700px}
+html{background:radial-gradient(60rem 45rem at 100% 100%,rgba(120,80,220,.18),transparent 70%),radial-gradient(50rem 40rem at 0% 0%,rgba(60,110,230,.12),transparent 70%),var(--background);background-attachment:fixed}
+body{background-color:transparent}
 
 /* Shorter laptop screens: tighten the sidebar so everything fits */
 @media (min-width:861px) and (max-height:780px){
