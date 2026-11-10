@@ -31,6 +31,8 @@ menu:
     link: /volunteering.html
   - label: Achievements
     link: /achievements.html
+  - label: FAQ
+    link: /faq.html
 
 # ---- You can ignore everything below this line ----
 markdown: kramdown
