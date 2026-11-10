@@ -43,6 +43,14 @@ Looked at the phase difference between HH and VV radar returns off the mouth of 
 
 Science justification and CAD work for a vein valve mechanism on ESA's young professionals satellite payload.
 
+### EIRSAT-1 spacecraft operations
+*UCD, 2026*
+
+Took part in operations for EIRSAT-1, Ireland's first satellite, built by students at UCD. That meant working satellite passes from the ground station: getting ready before the satellite came over the horizon, then tracking it and its radio signal during the few minutes it was in view.
+
+![The EIRSAT-1 ground station screens during a satellite pass](photos/eirsat1-ops.jpg)
+*In the EIRSAT-1 ground station, counting down to a pass, April 2026.*
+
 ### SQRT high-altitude balloon
 *UCD, 2025 to 2026*
 
