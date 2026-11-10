@@ -13,3 +13,6 @@ Thesis on sea surface salinity from BIOMASS P-band SAR, done at ESA ESTEC. Modul
 *Dublin City University, 2019 to 2023*
 
 Second Class Honours, Grade 1. Final year thesis on simulating interplanetary orbital transfers.
+
+![Graduating from DCU with classmates](photos/dcu-graduation.jpg)
+*Graduation day at DCU, featured in the Irish Independent. Photo: Kyran O'Brien, DCU Communications Office.*
