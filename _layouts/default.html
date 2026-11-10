@@ -4,7 +4,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
-<meta name="description" content="{{ site.name }} ({{ site.irish_name }}). Space science graduate working with radar satellite data. Recently an ESA ESTEC intern on the Biomass mission.">
+{% assign desc = page.description | default: site.description %}
+{% assign cv_file = site.static_files | where: "path", "/cv.pdf" | first %}
+<meta name="description" content="{{ desc }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}">
+<meta property="og:description" content="{{ desc }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ '/og-image.jpg' | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ site.name }} standing among model rockets in an ESA t-shirt">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#130f2c">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"{{ site.name }}","alternateName":"Orlaith Ní Dhúill",
+ "url":"{{ site.url }}","image":"{{ '/photo.jpg' | absolute_url }}","email":"mailto:{{ site.email }}",
+ "description":"{{ site.description }}","nationality":"Irish",
+ "alumniOf":[{"@type":"CollegeOrUniversity","name":"University College Dublin"},{"@type":"CollegeOrUniversity","name":"Dublin City University"}],
+ "knowsAbout":["Earth observation","Synthetic aperture radar","Remote sensing","Ocean salinity","Python"],
+ "sameAs":["{{ site.linkedin }}","{{ site.github }}"]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -26,14 +48,14 @@
     <a href="mailto:{{ site.email }}">Email</a>
     <a href="{{ site.linkedin }}">LinkedIn</a>
     <a href="{{ site.github }}">GitHub</a>
-    <a href="{{ site.cv | relative_url }}">CV (PDF)</a>
+    {% if cv_file %}<a href="{{ site.cv | relative_url }}">CV (PDF)</a>{% endif %}
   </div>
 </aside>
 <main>
 {% if page.url == "/" and site.orb %}<figure class="orb-fig"><canvas class="orb" id="orb" aria-hidden="true"></canvas></figure>{% endif %}
 {% if page.photo %}<img class="portrait" src="{{ page.photo | relative_url }}" alt="Photo of {{ site.name }}">{% endif %}
 {{ content }}
-<footer>{{ site.name }} &nbsp;/&nbsp; <a href="mailto:{{ site.email }}">{{ site.email }}</a></footer>
+<footer>{{ site.name }} &nbsp;/&nbsp; <a href="mailto:{{ site.email }}">{{ site.email }}</a> &nbsp;/&nbsp; Last updated {{ site.time | date: "%B %Y" }}</footer>
 </main>
 </div>
 <script src="{{ '/site.js' | relative_url }}"></script>

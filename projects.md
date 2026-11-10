@@ -1,4 +1,5 @@
 ---
+description: "Projects by Orlaith Doyle: sea surface salinity from ESA Biomass P-band SAR, mapping the Biomass catalogue, EIRSAT-1 operations and more."
 title: Projects
 ---
 
@@ -13,6 +14,8 @@ Biomass is ESA's first P-band radar satellite. I built a pipeline that takes its
 
 Along the way I found that one product format stored its image bands in the opposite order to its own metadata, which had been swapping HH and VV without anyone noticing.
 
+**Tools:** Python, xarray, tifffile, ESA MAAP, ERA5, SMOS, GLORYS12
+
 <!--
 ![Salinity map from Biomass](photos/biomass.png)
 *Salinity retrieved from a Biomass scene.*
@@ -22,6 +25,8 @@ Along the way I found that one product format stored its image bands in the oppo
 *ESA ESTEC, 2026*
 
 A script that works through the whole Biomass catalogue (over 220,000 products), finds the roughly 5,000 unique places imaged, and sorts them into ocean, coast and land. It made finding good ocean scenes much quicker. It can be stopped and restarted without losing progress, which mattered because a full run takes most of a day.
+
+**Tools:** Python, STAC API, ESA MAAP
 
 <!--
 ![World map of Biomass swaths](photos/swath-map.png)
@@ -33,10 +38,14 @@ A script that works through the whole Biomass catalogue (over 220,000 products),
 
 One patch of an equatorial Pacific scene behaved differently in the radar data. When I compared it with ocean model salinity and satellite sea temperature, there was a tongue of fresher water and a temperature front in the same spot, so it looks like a real ocean front.
 
+**Tools:** Python, FFT cross-spectra, H/α polarimetric decomposition, GLORYS12, OSTIA
+
 ### HH-VV phase over the Amazon plume
 *ESA ESTEC, 2026*
 
 Looked at the phase difference between HH and VV radar returns off the mouth of the Amazon, how stable it was between repeat passes, and how it compared with SMOS and SMAP salinity.
+
+**Tools:** Python, SMOS, SMAP
 
 ### YPSat-2 valve mechanism
 *ESA ESTEC, 2026*

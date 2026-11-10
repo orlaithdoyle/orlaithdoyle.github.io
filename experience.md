@@ -1,4 +1,5 @@
 ---
+description: "Work experience of Orlaith Doyle, including an Earth observation internship at ESA ESTEC on the Biomass mission."
 title: Experience
 ---
 

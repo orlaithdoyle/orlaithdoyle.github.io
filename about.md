@@ -1,4 +1,5 @@
 ---
+description: "About Orlaith Doyle (Ní Dhúill), a space science graduate from Ireland working with radar satellite data."
 title: About
 ---
 

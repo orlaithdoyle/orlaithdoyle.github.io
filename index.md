@@ -9,7 +9,7 @@ From May to October 2026 I was an intern at ESA's ESTEC centre in the Netherland
 
 Before that I did an MSc in Space Science and Technology at UCD and a BSc in Physics with Astronomy at DCU.
 
-I'm looking for work in Earth observation, remote sensing or the space sector, in Ireland or elsewhere in Europe. My [CV is here](cv.pdf), and the easiest way to reach me is [by email](mailto:orlaithbdoyle@gmail.com).
+{% assign cv_file = site.static_files | where: "path", "/cv.pdf" | first %}I'm looking for work in Earth observation, remote sensing or the space sector, in Ireland or elsewhere in Europe. The easiest way to reach me is [by email](mailto:orlaithbdoyle@gmail.com).{% if cv_file %} My [CV is here](cv.pdf).{% endif %}
 
 If you're hiring, my [quick answers page](faq.html) covers availability, location and right to work.
 

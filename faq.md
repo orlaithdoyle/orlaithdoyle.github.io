@@ -1,4 +1,5 @@
 ---
+description: "Quick answers for recruiters: availability, location, right to work and the kind of roles Orlaith Doyle is looking for."
 title: FAQ
 ---
 
@@ -40,4 +41,4 @@ Quite a lot. I'm working on new skills on my own time and would like a role wher
 
 ### How do I get in touch?
 
-Email is best: [orlaithbdoyle@gmail.com](mailto:orlaithbdoyle@gmail.com). My CV is [here](cv.pdf).
+{% assign cv_file = site.static_files | where: "path", "/cv.pdf" | first %}Email is best: [orlaithbdoyle@gmail.com](mailto:orlaithbdoyle@gmail.com).{% if cv_file %} My CV is [here](cv.pdf).{% endif %}
