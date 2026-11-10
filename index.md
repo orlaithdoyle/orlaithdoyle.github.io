@@ -1,6 +1,6 @@
 ---
-# To show your photo: upload it as photo.jpg, then delete the # at the start of the next line.
-# photo: photo.jpg
+# Your round photo on the home page. Put a # at the start of the next line to hide it.
+photo: photo.jpg
 ---
 
 I'm a space science graduate from Ireland. I work with radar satellite data, mostly over the ocean.
