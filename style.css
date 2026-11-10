@@ -4,12 +4,14 @@
    Pick colours at https://htmlcolorcodes.com
    ============================================================ */
 :root{
-  --background:#120e2b;   /* page background, deep blue-purple */
-  --panel:#171236;        /* the sidebar */
-  --text:#ece9f8;         /* main writing */
-  --faded:#a59ec9;        /* dates, captions and italic lines */
-  --links:#3cc6f2;        /* links, bright ocean blue */
-  --lines:#2c2656;        /* the thin dividing lines */
+  --background:#0b0716;   /* page background, near-black purple */
+  --text:#f3effc;         /* main writing */
+  --faded:#b3a6d6;        /* dates, captions and italic lines */
+  --links:#c99bff;        /* links, soft violet */
+  --accent:#a24dff;       /* glowing violet: bars, rings, orb */
+  --glow:#e04dff;         /* magenta highlights */
+  --glass:rgba(70,35,130,.22);      /* the frosted panels */
+  --lines:rgba(185,130,255,.20);    /* thin lines and panel edges */
   --font:"Arvo", Georgia, serif;
 }
 
@@ -39,12 +41,13 @@ main{padding:3.4rem 3.5rem 3rem 4rem;max-width:46rem}
 nav{display:flex;flex-direction:column;margin:2.2rem 0 0;border-top:1px solid var(--lines);padding-top:1.2rem}
 nav a{color:var(--faded);text-decoration:none;padding:.32rem 0 .32rem .9rem;border-left:2px solid transparent;margin-left:-.9rem;font-size:.95rem}
 nav a:hover{color:var(--text)}
-nav a[aria-current=page]{color:var(--text);border-left-color:var(--links)}
+nav a[aria-current=page]{color:var(--text);border-left-color:var(--accent);text-shadow:0 0 12px rgba(162,77,255,.7)}
 .contact{margin-top:auto;padding-top:2rem;display:flex;flex-wrap:wrap;gap:.35rem 1rem;font-size:.85rem}
 
 /* Reading column */
 h1{font-size:2rem;line-height:1.2;margin:0 0 1.6rem}
-h1::after{content:"";display:block;width:2.5rem;height:2px;background:var(--links);margin-top:.9rem}
+h1{text-shadow:0 0 28px rgba(162,77,255,.45)}
+h1::after{content:"";display:block;width:3rem;height:2px;background:linear-gradient(90deg,var(--accent),var(--glow));box-shadow:0 0 10px var(--accent);margin-top:.9rem}
 h2{font-size:1rem;font-weight:700;letter-spacing:.03em;color:var(--text);margin:3rem 0 1rem;
   padding-bottom:.5rem;border-bottom:1px solid var(--lines)}
 h3{font-size:1.1rem;line-height:1.35;margin:2.4rem 0 0}
@@ -59,7 +62,7 @@ p:has(> strong:first-child){display:grid;grid-template-columns:9.5rem minmax(0,1
 /* Bullets as small orbiting dots */
 ul{list-style:none;padding:0;margin:.4rem 0 1.2rem}
 li{position:relative;padding-left:1.3rem;margin-bottom:.45rem}
-li::before{content:"";position:absolute;left:0;top:.72em;width:.42rem;height:.42rem;border-radius:50%;border:1.5px solid var(--links)}
+li::before{content:"";position:absolute;left:0;top:.72em;width:.42rem;height:.42rem;border-radius:50%;border:1.5px solid var(--accent);box-shadow:0 0 6px rgba(162,77,255,.6)}
 
 /* Photos */
 main img{max-width:100%;height:auto;border:1px solid var(--lines);display:block;margin:1.6rem 0 .4rem;border-radius:4px}
@@ -84,7 +87,11 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opa
     radial-gradient(1px 1px at 84% 31%,#fff 50%,transparent 51%),
     radial-gradient(1px 1px at 93% 79%,#ffe8c8 50%,transparent 51%);
   background-size:700px 700px}
-html{background:radial-gradient(60rem 45rem at 100% 100%,rgba(120,80,220,.18),transparent 70%),radial-gradient(50rem 40rem at 0% 0%,rgba(60,110,230,.12),transparent 70%),var(--background);background-attachment:fixed}
+html{background:
+  radial-gradient(38rem 30rem at 100% 105%,rgba(190,60,255,.22),transparent 70%),
+  radial-gradient(30rem 26rem at -5% -5%,rgba(110,60,255,.20),transparent 70%),
+  radial-gradient(22rem 18rem at 70% 30%,rgba(140,60,255,.08),transparent 70%),
+  var(--background);background-attachment:fixed}
 body{background-color:transparent}
 
 /* Shorter laptop screens: tighten the sidebar so everything fits */
@@ -111,4 +118,14 @@ body{background-color:transparent}
   main{padding:2.2rem 1.4rem 2.5rem}
   p:has(> strong:first-child){display:block}
 }
+/* Frosted glass panels around each project, job and course */
+.panel{background:var(--glass);border:1px solid var(--lines);border-radius:14px;padding:1.3rem 1.5rem .4rem;margin:1.2rem 0;
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 0 34px rgba(140,60,255,.07)}
+.panel h3{margin-top:0}
+.panel img{margin-top:.6rem}
+.side{background:rgba(25,12,50,.35)}
+
+/* Glowing orb at the top of the home page */
+.orb{display:block;width:100%;height:clamp(220px,32vw,320px);margin:-1.2rem 0 1.4rem}
+
 @media print{.side{display:none}.shell{display:block}body{background:#fff;color:#000}body::after{display:none}}
