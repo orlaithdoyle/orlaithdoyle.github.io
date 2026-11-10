@@ -121,3 +121,46 @@ main p > img:not(.portrait){max-height:34rem;width:auto}
 main p:has(> a > img + img), main p:has(> a + a > img){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin:1rem 0 .4rem}
 main p:has(> a + a > img) img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;margin:0;max-height:none;border-radius:10px;transition:opacity .2s}
 main p:has(> a + a > img) a:hover img{opacity:.85}
+
+/* A field of small stars behind everything (two tile sizes so no pattern shows) */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.75;
+  background-image:
+    radial-gradient(0.9px 0.9px at 32.4% 15.1%,#ffffff 50%,transparent 51%),
+    radial-gradient(0.8px 0.8px at 82.1% 9.4%,#cfe6ff 50%,transparent 51%),
+    radial-gradient(0.8px 0.8px at 21.5% 8.6%,#ffffff 50%,transparent 51%),
+    radial-gradient(0.9px 0.9px at 9.1% 42.5%,#ffffff 50%,transparent 51%),
+    radial-gradient(0.8px 0.8px at 94.7% 63.1%,#ffffff 50%,transparent 51%),
+    radial-gradient(1.0px 1.0px at 57.7% 39.7%,#ffffff 50%,transparent 51%),
+    radial-gradient(0.8px 0.8px at 55.7% 13.3%,#cfe6ff 50%,transparent 51%),
+    radial-gradient(0.9px 0.9px at 11.8% 30.8%,#ffffff 50%,transparent 51%),
+    radial-gradient(0.7px 0.7px at 10.3% 57.1%,#ffffff 50%,transparent 51%),
+    radial-gradient(0.6px 0.6px at 54.8% 6.3%,#ffffff 50%,transparent 51%),
+    radial-gradient(0.9px 0.9px at 49.6% 53.2%,#d9d4ff 50%,transparent 51%),
+    radial-gradient(0.7px 0.7px at 58.6% 45.3%,#ffffff 50%,transparent 51%),
+    radial-gradient(0.8px 0.8px at 69.9% 24.4%,#cfe6ff 50%,transparent 51%),
+    radial-gradient(0.8px 0.8px at 49.5% 34.3%,#cfe6ff 50%,transparent 51%),
+    radial-gradient(0.8px 0.8px at 98.0% 11.8%,#d9d4ff 50%,transparent 51%),
+    radial-gradient(0.6px 0.6px at 15.2% 48.9%,#cfe6ff 50%,transparent 51%),
+    radial-gradient(0.9px 0.9px at 7.8% 55.8%,#d9d4ff 50%,transparent 51%),
+    radial-gradient(0.8px 0.8px at 34.0% 35.0%,#d9d4ff 50%,transparent 51%),
+    radial-gradient(0.7px 0.7px at 6.9% 9.4%,#cfe6ff 50%,transparent 51%),
+    radial-gradient(0.9px 0.9px at 66.4% 6.1%,#cfe6ff 50%,transparent 51%),
+    radial-gradient(0.8px 0.8px at 57.8% 68.1%,#cfe6ff 50%,transparent 51%),
+    radial-gradient(0.6px 0.6px at 38.6% 66.9%,#d9d4ff 50%,transparent 51%),
+    radial-gradient(0.8px 0.8px at 35.5% 61.1%,#ffffff 50%,transparent 51%),
+    radial-gradient(0.7px 0.7px at 76.8% 12.9%,#d9d4ff 50%,transparent 51%),
+    radial-gradient(0.7px 0.7px at 91.7% 49.7%,#d9d4ff 50%,transparent 51%),
+    radial-gradient(0.9px 0.9px at 54.9% 88.3%,#cfe6ff 50%,transparent 51%),
+    radial-gradient(1.2px 1.2px at 27.8% 41.5%,#ffe8c8 50%,transparent 51%),
+    radial-gradient(1.1px 1.1px at 95.8% 15.1%,#ffffff 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 65.9% 1.2%,#ffffff 50%,transparent 51%),
+    radial-gradient(1.3px 1.3px at 26.3% 0.4%,#ffe8c8 50%,transparent 51%),
+    radial-gradient(1.1px 1.1px at 61.0% 31.9%,#e3d6ff 50%,transparent 51%),
+    radial-gradient(1.4px 1.4px at 95.0% 65.5%,#ffe8c8 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 90.0% 78.0%,#e3d6ff 50%,transparent 51%),
+    radial-gradient(1.1px 1.1px at 39.2% 39.9%,#e3d6ff 50%,transparent 51%),
+    radial-gradient(1.6px 1.6px at 40.0% 19.1%,#ffe8c8 50%,transparent 51%),
+    radial-gradient(1.0px 1.0px at 16.2% 34.0%,#ffffff 50%,transparent 51%),
+    radial-gradient(1.6px 1.6px at 56.7% 53.7%,#e3d6ff 50%,transparent 51%),
+    radial-gradient(1.4px 1.4px at 2.6% 87.4%,#ffffff 50%,transparent 51%);
+  background-size:480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px}
