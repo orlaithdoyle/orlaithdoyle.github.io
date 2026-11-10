@@ -4,17 +4,18 @@
    Pick colours at https://htmlcolorcodes.com
    ============================================================ */
 :root{
-  --background:#151a1e;   /* page background, dark slate */
-  --text:#e6eaec;         /* main writing */
-  --faded:#9aa6ad;        /* dates, captions and italic lines */
+  --background:#0c1322;   /* page background, deep night blue */
+  --text:#e8ecf2;         /* main writing */
+  --faded:#93a0b5;        /* dates, captions and italic lines */
   --links:#3cc6f2;        /* links, bright ocean blue */
-  --lines:#2f3a41;        /* the thin dividing lines */
+  --lines:#24304a;        /* the thin dividing lines */
+  --glow:#3cc6f2;         /* the faint atmosphere glow at the top */
   --font:"Arvo", Georgia, serif;
 }
 
 /* ---- You shouldn't need to change anything below ---- */
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--background);color:var(--text);font-family:var(--font);font-size:1.05rem;line-height:1.75}
+body{margin:0;background-color:var(--background);color:var(--text);font-family:var(--font);font-size:1.05rem;line-height:1.75}
 .page{max-width:44rem;margin:0 auto;padding:2.2rem 1.4rem 4rem}
 a{color:var(--links);text-underline-offset:.18em}
 a:hover{color:var(--text)}
@@ -46,3 +47,29 @@ footer{font-size:.92rem;color:var(--faded)}
   body{font-size:1rem}
   main img.portrait{float:none;width:9rem;margin:0 0 1.2rem}
 }
+
+/* ---- Space touches ---- */
+/* Faint curve of atmosphere along the top, like Earth's edge from orbit */
+body::before{content:"";position:fixed;left:-25%;right:-25%;top:-95vh;height:100vh;border-radius:50%;
+  box-shadow:0 0 90px 10px color-mix(in srgb,var(--glow) 22%,transparent),0 2px 0 0 color-mix(in srgb,var(--glow) 30%,transparent);
+  pointer-events:none;z-index:-1}
+/* A light scattering of dim stars */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opacity:.8;
+  background-image:
+    radial-gradient(1px 1px at 7% 22%,#fff 50%,transparent 51%),
+    radial-gradient(1px 1px at 18% 71%,#cfe6ff 50%,transparent 51%),
+    radial-gradient(1.2px 1.2px at 31% 41%,#fff 50%,transparent 51%),
+    radial-gradient(1px 1px at 46% 88%,#fff 50%,transparent 51%),
+    radial-gradient(1px 1px at 59% 14%,#cfe6ff 50%,transparent 51%),
+    radial-gradient(1.2px 1.2px at 73% 57%,#fff 50%,transparent 51%),
+    radial-gradient(1px 1px at 84% 31%,#fff 50%,transparent 51%),
+    radial-gradient(1px 1px at 93% 79%,#ffe8c8 50%,transparent 51%);
+  background-size:700px 700px}
+@supports not (color:color-mix(in srgb,red,blue)){body::before{box-shadow:0 0 90px 10px rgba(60,198,242,.2)}}
+
+.name{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.orbit{width:1.6rem;height:1.6rem;align-self:center;flex:none}
+h3{position:relative}
+main h1::after{content:"";display:block;width:2.5rem;height:2px;background:var(--links);margin-top:.6rem;opacity:.8}
+main img.portrait{border-radius:50%;aspect-ratio:1;object-fit:cover;border:1px solid var(--lines);
+  box-shadow:0 0 0 6px var(--background),0 0 0 7px color-mix(in srgb,var(--links) 45%,transparent)}
