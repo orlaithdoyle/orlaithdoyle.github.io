@@ -13,6 +13,9 @@ title: Experience
 - Prepared cal/val site files for my supervisor's team
 - Science and CAD work on the YPSat-2 payload
 
+![Orlaith in an ESA t-shirt standing among large model rockets](photos/esa-launchers.jpg)
+*With the model launchers during my ESA internship, 2026.*
+
 ### Tutor, Grade+
 *My own tutoring practice. February 2024 to now*
 
