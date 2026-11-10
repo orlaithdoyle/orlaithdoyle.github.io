@@ -14,8 +14,8 @@ cv: cv.pdf
 tagline: ""
 status: Available for new roles
 
-# The glowing orb at the top of the home page. Change to false to hide it.
-orb: true
+# The animated globe at the top of the home page. Change to true to bring it back.
+orb: false
 
 # The menu at the top of every page, in order.
 # To hide a page from the menu, delete its two lines.

@@ -4,13 +4,12 @@
    Pick colours at https://htmlcolorcodes.com
    ============================================================ */
 :root{
-  --background:#0b0716;   /* page background, near-black purple */
+  --background:#130f2c;   /* page background, dark blue-purple */
   --text:#f3effc;         /* main writing */
   --faded:#b3a6d6;        /* dates, captions and italic lines */
   --links:#c99bff;        /* links, soft violet */
-  --accent:#a24dff;       /* glowing violet: bars, rings, orb */
+  --accent:#a24dff;       /* violet: menu marker, title underline, bullets */
   --glow:#e04dff;         /* magenta highlights */
-  --glass:rgba(70,35,130,.22);      /* the frosted panels */
   --lines:rgba(185,130,255,.20);    /* thin lines and panel edges */
   --font:"Times New Roman", Times, serif;   /* was "Arvo", Georgia, serif */
 }
@@ -41,13 +40,12 @@ main{padding:3.4rem 3.5rem 3rem 4rem;max-width:46rem}
 nav{display:flex;flex-direction:column;margin:2.2rem 0 0;border-top:1px solid var(--lines);padding-top:1.2rem}
 nav a{color:var(--faded);text-decoration:none;padding:.32rem 0 .32rem .9rem;border-left:2px solid transparent;margin-left:-.9rem;font-size:.95rem}
 nav a:hover{color:var(--text)}
-nav a[aria-current=page]{color:var(--text);border-left-color:var(--accent);text-shadow:0 0 12px rgba(162,77,255,.7)}
+nav a[aria-current=page]{color:var(--text);border-left-color:var(--accent)}
 .contact{margin-top:auto;padding-top:2rem;display:flex;flex-wrap:wrap;gap:.35rem 1rem;font-size:.85rem}
 
 /* Reading column */
 h1{font-size:2rem;line-height:1.2;margin:0 0 1.6rem}
-h1{text-shadow:0 0 28px rgba(162,77,255,.45)}
-h1::after{content:"";display:block;width:3rem;height:2px;background:linear-gradient(90deg,var(--accent),var(--glow));box-shadow:0 0 10px var(--accent);margin-top:.9rem}
+h1::after{content:"";display:block;width:2.5rem;height:2px;background:var(--accent);margin-top:.9rem}
 h2{font-size:1rem;font-weight:700;letter-spacing:.03em;color:var(--text);margin:3rem 0 1rem;
   padding-bottom:.5rem;border-bottom:1px solid var(--lines)}
 h3{font-size:1.1rem;line-height:1.35;margin:2.4rem 0 0}
@@ -62,13 +60,13 @@ p:has(> strong:first-child){display:grid;grid-template-columns:9.5rem minmax(0,1
 /* Bullets as small orbiting dots */
 ul{list-style:none;padding:0;margin:.4rem 0 1.2rem}
 li{position:relative;padding-left:1.3rem;margin-bottom:.45rem}
-li::before{content:"";position:absolute;left:0;top:.72em;width:.42rem;height:.42rem;border-radius:50%;border:1.5px solid var(--accent);box-shadow:0 0 6px rgba(162,77,255,.6)}
+li::before{content:"";position:absolute;left:0;top:.72em;width:.42rem;height:.42rem;border-radius:50%;border:1.5px solid var(--accent)}
 
 /* Photos */
 main img{max-width:100%;height:auto;border:1px solid var(--lines);display:block;margin:1.6rem 0 .4rem;border-radius:4px}
 main img + em, main p:has(> img) + p:has(> em:only-child){font-size:.88rem}
 main img.portrait{float:right;width:13rem;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:14px;margin:.3rem 0 1.2rem 2rem;border-color:rgba(201,155,255,.5);
-  box-shadow:0 0 0 1px rgba(201,155,255,.35),0 0 34px rgba(162,77,255,.35)}
+  box-shadow:none}
 
 /* Home page: the first paragraph reads as an introduction */
 main > p:first-of-type{font-size:1.18rem;line-height:1.65}
@@ -76,22 +74,7 @@ main > p:first-of-type{font-size:1.18rem;line-height:1.65}
 footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--lines);font-size:.82rem;color:var(--faded)}
 
 /* ---- Space touches ---- */
-body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opacity:.9;
-  background-image:
-    radial-gradient(1px 1px at 7% 22%,#fff 50%,transparent 51%),
-    radial-gradient(1px 1px at 18% 71%,#cfe6ff 50%,transparent 51%),
-    radial-gradient(1.2px 1.2px at 31% 41%,#fff 50%,transparent 51%),
-    radial-gradient(1px 1px at 46% 88%,#fff 50%,transparent 51%),
-    radial-gradient(1px 1px at 59% 14%,#cfe6ff 50%,transparent 51%),
-    radial-gradient(1.2px 1.2px at 73% 57%,#fff 50%,transparent 51%),
-    radial-gradient(1px 1px at 84% 31%,#fff 50%,transparent 51%),
-    radial-gradient(1px 1px at 93% 79%,#ffe8c8 50%,transparent 51%);
-  background-size:700px 700px}
-html{background:
-  radial-gradient(38rem 30rem at 100% 105%,rgba(190,60,255,.22),transparent 70%),
-  radial-gradient(30rem 26rem at -5% -5%,rgba(110,60,255,.20),transparent 70%),
-  radial-gradient(22rem 18rem at 70% 30%,rgba(140,60,255,.08),transparent 70%),
-  var(--background);background-attachment:fixed}
+html{background:var(--background)}
 body{background-color:transparent}
 
 /* Shorter laptop screens: tighten the sidebar so everything fits */
@@ -120,11 +103,11 @@ body{background-color:transparent}
   main img.portrait{float:none;width:100%;max-width:20rem;margin:0 0 1.4rem}
 }
 /* Frosted glass panels around each project, job and course */
-.panel{background:var(--glass);border:1px solid var(--lines);border-radius:14px;padding:1.3rem 1.5rem .4rem;margin:1.2rem 0;
-  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 0 34px rgba(140,60,255,.07)}
+.panel{border-top:1px solid var(--lines);padding:1.6rem 0 .2rem;margin:0}
+.panel:first-of-type{border-top:0;padding-top:.4rem}
 .panel h3{margin-top:0}
 .panel img{margin-top:.6rem}
-.side{background:rgba(25,12,50,.35)}
+.side{background:rgba(255,255,255,.015)}
 
 /* Glowing orb at the top of the home page */
 .orb{display:block;width:100%;height:clamp(240px,34vw,340px);margin:-1.2rem 0 1.4rem}
@@ -134,5 +117,5 @@ main h2{clear:both}
 main p > img:not(.portrait){max-height:34rem;width:auto}
 /* Photo gallery: several photos in one block sit side by side */
 main p:has(> a > img + img), main p:has(> a + a > img){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin:1rem 0 .4rem}
-main p:has(> a + a > img) img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;margin:0;max-height:none;border-radius:10px;transition:transform .2s}
-main p:has(> a + a > img) a:hover img{transform:scale(1.02);box-shadow:0 0 22px rgba(162,77,255,.45)}
+main p:has(> a + a > img) img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;margin:0;max-height:none;border-radius:10px;transition:opacity .2s}
+main p:has(> a + a > img) a:hover img{opacity:.85}
