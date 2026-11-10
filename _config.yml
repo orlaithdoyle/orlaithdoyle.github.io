@@ -10,6 +10,10 @@ linkedin: https://www.linkedin.com/in/orlaith-doyle-102558223
 github: https://github.com/orlaithdoyle
 cv: cv.pdf
 
+# The short line under your name, and the note under that.
+tagline: Earth observation and radar remote sensing
+status: Available for new roles
+
 # The menu at the top of every page, in order.
 # To hide a page from the menu, delete its two lines.
 menu:

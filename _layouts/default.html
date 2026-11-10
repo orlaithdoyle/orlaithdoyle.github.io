@@ -12,22 +12,28 @@
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 </head>
 <body>
-<div class="page">
-<header>
-  <p class="name"><svg class="orbit" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="5" fill="#3cc6f2"/><ellipse cx="16" cy="16" rx="14" ry="6" fill="none" stroke="#93a0b5" stroke-width="1.2" transform="rotate(-25 16 16)"/><circle cx="28.3" cy="10.2" r="1.6" fill="#e8ecf2"/></svg><a href="{{ '/' | relative_url }}">{{ site.name }}</a> <small>{{ site.irish_name }}</small></p>
-  <nav>{% for item in site.menu %}<a href="{{ item.link | relative_url }}"{% if page.url == item.link %} aria-current="page"{% endif %}>{{ item.label }}</a> {% endfor %}</nav>
-</header>
+<div class="shell">
+<aside class="side">
+  <a class="mark" href="{{ '/' | relative_url }}" aria-label="Home">
+    <svg class="orbit" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="5" fill="#3cc6f2"/><ellipse cx="16" cy="16" rx="14" ry="6" fill="none" stroke="#93a0b5" stroke-width="1.2" transform="rotate(-25 16 16)"/><circle cx="28.3" cy="10.2" r="1.6" fill="#e8ecf2"/></svg>
+  </a>
+  <p class="name"><a href="{{ '/' | relative_url }}">{{ site.name }}</a></p>
+  <p class="irish">{{ site.irish_name }}</p>
+  <p class="tagline">{{ site.tagline }}</p>
+  <p class="status">{{ site.status }}</p>
+  <nav aria-label="Main">{% for item in site.menu %}<a href="{{ item.link | relative_url }}"{% if page.url == item.link %} aria-current="page"{% endif %}>{{ item.label }}</a> {% endfor %}</nav>
+  <div class="contact">
+    <a href="mailto:{{ site.email }}">Email</a>
+    <a href="{{ site.linkedin }}">LinkedIn</a>
+    <a href="{{ site.github }}">GitHub</a>
+    <a href="{{ site.cv | relative_url }}">CV (PDF)</a>
+  </div>
+</aside>
 <main>
 {% if page.photo %}<img class="portrait" src="{{ page.photo | relative_url }}" alt="Photo of {{ site.name }}">{% endif %}
 {{ content }}
+<footer>{{ site.name }} &nbsp;/&nbsp; <a href="mailto:{{ site.email }}">{{ site.email }}</a></footer>
 </main>
-<hr>
-<footer>
-  <a href="mailto:{{ site.email }}">{{ site.email }}</a> &nbsp;|&nbsp;
-  <a href="{{ site.linkedin }}">LinkedIn</a> &nbsp;|&nbsp;
-  <a href="{{ site.github }}">GitHub</a> &nbsp;|&nbsp;
-  <a href="{{ site.cv | relative_url }}">CV</a>
-</footer>
 </div>
 </body>
 </html>

@@ -5,6 +5,7 @@
    ============================================================ */
 :root{
   --background:#0c1322;   /* page background, deep night blue */
+  --panel:#111a2d;        /* the sidebar */
   --text:#e8ecf2;         /* main writing */
   --faded:#93a0b5;        /* dates, captions and italic lines */
   --links:#3cc6f2;        /* links, bright ocean blue */
@@ -14,46 +15,67 @@
 }
 
 /* ---- You shouldn't need to change anything below ---- */
+*{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background-color:var(--background);color:var(--text);font-family:var(--font);font-size:1.05rem;line-height:1.75}
-.page{max-width:44rem;margin:0 auto;padding:2.2rem 1.4rem 4rem}
-a{color:var(--links);text-underline-offset:.18em}
+body{margin:0;background-color:var(--background);color:var(--text);font-family:var(--font);font-size:1rem;line-height:1.75}
+a{color:var(--links);text-decoration-thickness:1px;text-underline-offset:.2em}
 a:hover{color:var(--text)}
-a:focus-visible{outline:2px solid var(--links);outline-offset:2px}
+a:focus-visible{outline:2px solid var(--links);outline-offset:3px;border-radius:2px}
 
-header{border-bottom:1px solid var(--lines);padding-bottom:1rem;margin-bottom:2rem}
-.name{font-size:1.85rem;font-weight:700;margin:0;line-height:1.3}
+/* Two-column shell: fixed sidebar + reading column */
+.shell{display:grid;grid-template-columns:17rem minmax(0,1fr);min-height:100vh;max-width:66rem;margin:0 auto}
+.side{position:sticky;top:0;height:100vh;padding:3.2rem 2rem 2rem 2.2rem;border-right:1px solid var(--lines);
+  display:flex;flex-direction:column}
+main{padding:3.4rem 3.5rem 3rem 4rem;max-width:46rem}
+
+/* Sidebar contents */
+.mark{display:inline-block;width:2.4rem;margin-bottom:1.2rem}
+.orbit{width:100%;height:auto;display:block}
+.name{font-size:1.55rem;font-weight:700;line-height:1.2;margin:0}
 .name a{color:var(--text);text-decoration:none}
-.name small{font-size:1rem;font-weight:400;color:var(--faded);font-style:italic}
-nav{margin-top:.5rem;font-size:.98rem}
-nav a{margin-right:1rem;white-space:nowrap}
-nav a[aria-current=page]{color:var(--text);text-decoration:none;border-bottom:2px solid var(--links)}
+.irish{margin:.2rem 0 0;color:var(--faded);font-style:italic}
+.tagline{margin:1.1rem 0 0;font-size:.92rem;line-height:1.55;color:var(--text)}
+.status{margin:.9rem 0 0;font-size:.82rem;color:var(--faded);display:flex;align-items:center;gap:.5rem}
+.status::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:#4ed6a0;box-shadow:0 0 0 3px rgba(78,214,160,.18);flex:none}
+nav{display:flex;flex-direction:column;margin:2.2rem 0 0;border-top:1px solid var(--lines);padding-top:1.2rem}
+nav a{color:var(--faded);text-decoration:none;padding:.32rem 0 .32rem .9rem;border-left:2px solid transparent;margin-left:-.9rem;font-size:.95rem}
+nav a:hover{color:var(--text)}
+nav a[aria-current=page]{color:var(--text);border-left-color:var(--links)}
+.contact{margin-top:auto;padding-top:2rem;display:flex;flex-wrap:wrap;gap:.35rem 1rem;font-size:.85rem}
 
-h1{font-size:1.6rem;margin:0 0 1rem}
-h2{font-size:1.25rem;margin:2.4rem 0 .5rem}
-h3{font-size:1.08rem;margin:1.8rem 0 .1rem}
-p{margin:0 0 1rem}
-em{color:var(--faded)}
+/* Reading column */
+h1{font-size:2rem;line-height:1.2;margin:0 0 1.6rem}
+h1::after{content:"";display:block;width:2.5rem;height:2px;background:var(--links);margin-top:.9rem}
+h2{font-size:1rem;font-weight:700;letter-spacing:.03em;color:var(--text);margin:3rem 0 1rem;
+  padding-bottom:.5rem;border-bottom:1px solid var(--lines)}
+h3{font-size:1.1rem;line-height:1.35;margin:2.4rem 0 0}
+p{margin:0 0 1.1rem}
 strong{color:var(--text)}
-ul{padding-left:1.2rem;margin:.3rem 0 1rem}
-li{margin-bottom:.35rem}
-main img{max-width:100%;height:auto;border:1px solid var(--lines);display:block;margin:1.2rem 0 .3rem}
-main img.portrait{float:left;width:10rem;margin:.35rem 1.6rem .8rem 0}
-main h2{clear:both}
-hr{border:0;border-top:1px solid var(--lines);margin:2.5rem 0 1.2rem;clear:both}
-footer{font-size:.92rem;color:var(--faded)}
+em{color:var(--faded)}
+/* The italic line straight after a heading (place and date) */
+h3 + p:has(> em:only-child){font-size:.88rem;margin:.15rem 0 .8rem}
+/* "Label: text" paragraphs, e.g. on the About page */
+p:has(> strong:first-child){display:grid;grid-template-columns:9.5rem minmax(0,1fr);column-gap:1.2rem;margin-bottom:.9rem}
 
-@media (max-width:600px){
-  body{font-size:1rem}
-  main img.portrait{float:none;width:9rem;margin:0 0 1.2rem}
-}
+/* Bullets as small orbiting dots */
+ul{list-style:none;padding:0;margin:.4rem 0 1.2rem}
+li{position:relative;padding-left:1.3rem;margin-bottom:.45rem}
+li::before{content:"";position:absolute;left:0;top:.72em;width:.42rem;height:.42rem;border-radius:50%;border:1.5px solid var(--links)}
+
+/* Photos */
+main img{max-width:100%;height:auto;border:1px solid var(--lines);display:block;margin:1.6rem 0 .4rem;border-radius:4px}
+main img + em, main p:has(> img) + p:has(> em:only-child){font-size:.88rem}
+main img.portrait{width:9.5rem;aspect-ratio:1;object-fit:cover;border-radius:50%;margin:0 0 2rem;
+  box-shadow:0 0 0 6px var(--background),0 0 0 7px rgba(60,198,242,.45)}
+
+/* Home page: the first paragraph reads as an introduction */
+main > p:first-of-type{font-size:1.18rem;line-height:1.65}
+
+footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--lines);font-size:.82rem;color:var(--faded)}
 
 /* ---- Space touches ---- */
-/* Faint curve of atmosphere along the top, like Earth's edge from orbit */
 body::before{content:"";position:fixed;left:-25%;right:-25%;top:-95vh;height:100vh;border-radius:50%;
-  box-shadow:0 0 90px 10px color-mix(in srgb,var(--glow) 22%,transparent),0 2px 0 0 color-mix(in srgb,var(--glow) 30%,transparent);
-  pointer-events:none;z-index:-1}
-/* A light scattering of dim stars */
+  box-shadow:0 0 90px 10px rgba(60,198,242,.16),0 2px 0 0 rgba(60,198,242,.25);pointer-events:none;z-index:-1}
 body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opacity:.8;
   background-image:
     radial-gradient(1px 1px at 7% 22%,#fff 50%,transparent 51%),
@@ -65,11 +87,17 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opa
     radial-gradient(1px 1px at 84% 31%,#fff 50%,transparent 51%),
     radial-gradient(1px 1px at 93% 79%,#ffe8c8 50%,transparent 51%);
   background-size:700px 700px}
-@supports not (color:color-mix(in srgb,red,blue)){body::before{box-shadow:0 0 90px 10px rgba(60,198,242,.2)}}
 
-.name{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
-.orbit{width:1.6rem;height:1.6rem;align-self:center;flex:none}
-h3{position:relative}
-main h1::after{content:"";display:block;width:2.5rem;height:2px;background:var(--links);margin-top:.6rem;opacity:.8}
-main img.portrait{border-radius:50%;aspect-ratio:1;object-fit:cover;border:1px solid var(--lines);
-  box-shadow:0 0 0 6px var(--background),0 0 0 7px color-mix(in srgb,var(--links) 45%,transparent)}
+/* Phones and small tablets: sidebar becomes a header */
+@media (max-width:860px){
+  .shell{grid-template-columns:1fr}
+  .side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--lines);padding:2rem 1.4rem 1.2rem}
+  .mark{width:2rem;margin-bottom:.8rem}
+  nav{flex-direction:row;flex-wrap:wrap;gap:.2rem 1.1rem;margin-top:1.2rem;padding-top:.9rem}
+  nav a{margin:0;padding:.2rem 0;border-left:0;border-bottom:2px solid transparent}
+  nav a[aria-current=page]{border-bottom-color:var(--links)}
+  .contact{padding-top:1rem}
+  main{padding:2.2rem 1.4rem 2.5rem}
+  p:has(> strong:first-child){display:block}
+}
+@media print{.side{display:none}.shell{display:block}body{background:#fff;color:#000}body::before,body::after{display:none}}
