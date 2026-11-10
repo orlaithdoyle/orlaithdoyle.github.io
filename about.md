@@ -19,6 +19,14 @@ From 2016 to 2019 I coached at Blessington GAA, first with the children in the c
 
 *Is féidir liom obair trí Ghaeilge freisin.* (I can work through Irish too.)
 
+## A few more photos
+
+[![Orlaith reaching up to a large radio dish under a blue sky](photos/dish.jpg)](photos/dish.jpg)
+[![Orlaith in an astronaut photo board, waving](photos/astronaut.jpg)](photos/astronaut.jpg)
+[![Orlaith looking around a space station module exhibit](photos/module-exhibit.jpg)](photos/module-exhibit.jpg)
+
+*Click a photo to see it full size.*
+
 ## Skills
 
 **Remote sensing:** SAR, InSAR, polarimetric SAR, Sentinel-1 and Sentinel-2, SWOT, SMOS and SMAP salinity products.
