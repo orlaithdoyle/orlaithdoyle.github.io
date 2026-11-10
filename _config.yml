@@ -35,6 +35,9 @@ menu:
     link: /faq.html
 
 # ---- You can ignore everything below this line ----
+url: https://orlaithdoyle.github.io
+plugins:
+  - jekyll-sitemap
 markdown: kramdown
 defaults:
   - scope:
