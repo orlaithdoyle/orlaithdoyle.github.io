@@ -127,7 +127,7 @@ body{background-color:transparent}
 .side{background:rgba(25,12,50,.35)}
 
 /* Glowing orb at the top of the home page */
-.orb{display:block;width:100%;height:clamp(220px,32vw,320px);margin:-1.2rem 0 1.4rem}
+.orb{display:block;width:100%;height:clamp(240px,34vw,340px);margin:-1.2rem 0 1.4rem}
 
 @media print{.side{display:none}.shell{display:block}body{background:#fff;color:#000}body::after{display:none}}
 main h2{clear:both}
