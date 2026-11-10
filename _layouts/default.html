@@ -19,7 +19,7 @@
   </a>
   <p class="name"><a href="{{ '/' | relative_url }}">{{ site.name }}</a></p>
   <p class="irish">{{ site.irish_name }}</p>
-  <p class="tagline">{{ site.tagline }}</p>
+  {% if site.tagline != "" %}<p class="tagline">{{ site.tagline }}</p>{% endif %}
   <p class="status">{{ site.status }}</p>
   <nav aria-label="Main">{% for item in site.menu %}<a href="{{ item.link | relative_url }}"{% if page.url == item.link %} aria-current="page"{% endif %}>{{ item.label }}</a> {% endfor %}</nav>
   <div class="contact">
