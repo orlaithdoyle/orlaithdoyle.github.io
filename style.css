@@ -164,3 +164,16 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opa
     radial-gradient(1.6px 1.6px at 56.7% 53.7%,#e3d6ff 50%,transparent 51%),
     radial-gradient(1.4px 1.4px at 2.6% 87.4%,#ffffff 50%,transparent 51%);
   background-size:480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,480px 480px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px,830px 830px}
+
+/* ---- Bolder type ---- */
+.name{font-size:1.9rem;letter-spacing:-.01em}
+.irish{font-size:1.1rem}
+nav a{font-size:1.05rem}
+h1{font-size:clamp(2.3rem,4.5vw,3rem);line-height:1.1;letter-spacing:-.015em;color:#fff}
+h2{font-size:1.4rem;letter-spacing:0;color:#fff;margin-top:3.2rem}
+h3{font-size:1.32rem;line-height:1.3;color:#fff;letter-spacing:-.005em}
+h3 + p:has(> em:only-child){font-size:1rem}
+h3 + p:has(> em:only-child) em{color:#c9b8ff}
+main > p:first-of-type{font-size:1.32rem;line-height:1.55;color:#fff}
+strong{color:#fff}
+body{color:#f1edfb}
