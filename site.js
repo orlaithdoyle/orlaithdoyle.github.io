@@ -63,22 +63,34 @@
     var x = cx + p[0] * R, y = cy + p[1] * R;
     var ang = Math.atan2((ahead[1] - p[1]), (ahead[0] - p[0]));
     var near = (p[2] + SAT_R) / (2 * SAT_R);
-    var sc = dpr * (0.75 + near * 0.5);
+    var sc = dpr * (0.7 + near * 0.4);
     ctx.save();
     ctx.globalAlpha = hidden(p) ? 0.18 : 1;
-    ctx.translate(x, y); ctx.rotate(ang + Math.PI / 2);
-    ctx.shadowColor = 'rgba(214,150,255,0.9)'; ctx.shadowBlur = 14 * dpr;
-    // solar panels
-    ctx.fillStyle = '#8f7dff';
-    ctx.fillRect(-15 * sc, -2.6 * sc, 10 * sc, 5.2 * sc);
-    ctx.fillRect(5 * sc, -2.6 * sc, 10 * sc, 5.2 * sc);
-    ctx.strokeStyle = 'rgba(255,255,255,0.55)'; ctx.lineWidth = 0.6 * sc;
-    for (var u = -12; u <= 12; u += 3) { if (Math.abs(u) > 4) { ctx.beginPath(); ctx.moveTo(u * sc, -2.6 * sc); ctx.lineTo(u * sc, 2.6 * sc); ctx.stroke(); } }
-    // body and antenna
-    ctx.fillStyle = '#f3effc';
-    ctx.fillRect(-4 * sc, -4 * sc, 8 * sc, 8 * sc);
-    ctx.fillStyle = '#e04dff';
-    ctx.beginPath(); ctx.arc(0, -6 * sc, 1.6 * sc, 0, 6.283); ctx.fill();
+    ctx.translate(x, y); ctx.rotate(Math.atan2(p[1], p[0]) + Math.PI / 2 + Math.PI);
+    ctx.shadowColor = 'rgba(214,150,255,0.85)'; ctx.shadowBlur = 12 * dpr;
+    // Biomass: a box-shaped body, one solar wing, and a long boom holding
+    // the big 12 m wire-mesh reflector that unfolds like an umbrella.
+    // solar wing
+    ctx.fillStyle = '#7f6cff';
+    ctx.fillRect(-21 * sc, -2.4 * sc, 15 * sc, 4.8 * sc);
+    ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 0.5 * sc;
+    for (var u = -18; u <= -8; u += 3) { ctx.beginPath(); ctx.moveTo(u * sc, -2.4 * sc); ctx.lineTo(u * sc, 2.4 * sc); ctx.stroke(); }
+    ctx.fillStyle = 'rgba(200,190,255,0.7)'; ctx.fillRect(-6 * sc, -0.4 * sc, 2 * sc, 0.8 * sc);
+    // body (gold thermal blanket look)
+    ctx.fillStyle = '#e9c77a'; ctx.fillRect(-4 * sc, -4.5 * sc, 8 * sc, 9 * sc);
+    ctx.fillStyle = '#f3effc'; ctx.fillRect(-4 * sc, -4.5 * sc, 8 * sc, 2 * sc);
+    // boom, three segments with hinges
+    ctx.strokeStyle = '#f3effc'; ctx.lineWidth = 1 * sc; ctx.beginPath();
+    ctx.moveTo(3 * sc, -3 * sc); ctx.lineTo(8 * sc, -9 * sc); ctx.lineTo(11 * sc, -15 * sc); ctx.lineTo(13 * sc, -20 * sc); ctx.stroke();
+    // reflector: a wide shallow dish seen at an angle, with ribs
+    ctx.save(); ctx.translate(14 * sc, -24 * sc); ctx.rotate(-0.35);
+    ctx.shadowBlur = 16 * dpr;
+    ctx.fillStyle = 'rgba(233,199,122,0.32)'; ctx.strokeStyle = 'rgba(245,225,170,0.95)'; ctx.lineWidth = 0.8 * sc;
+    ctx.beginPath(); ctx.ellipse(0, 0, 13 * sc, 4.6 * sc, 0, 0, 6.283); ctx.fill(); ctx.stroke();
+    ctx.shadowBlur = 0; ctx.strokeStyle = 'rgba(245,225,170,0.45)'; ctx.lineWidth = 0.45 * sc;
+    for (var r = 0; r < 12; r++) { var th = r * Math.PI / 6; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(Math.cos(th) * 13 * sc, Math.sin(th) * 4.6 * sc); ctx.stroke(); }
+    ctx.beginPath(); ctx.ellipse(0, 0, 7 * sc, 2.5 * sc, 0, 0, 6.283); ctx.stroke();
+    ctx.restore();
     ctx.restore();
   }
 
