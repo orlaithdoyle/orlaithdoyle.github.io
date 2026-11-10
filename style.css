@@ -10,7 +10,6 @@
   --faded:#93a0b5;        /* dates, captions and italic lines */
   --links:#3cc6f2;        /* links, bright ocean blue */
   --lines:#24304a;        /* the thin dividing lines */
-  --glow:#3cc6f2;         /* the faint atmosphere glow at the top */
   --font:"Arvo", Georgia, serif;
 }
 
@@ -74,8 +73,6 @@ main > p:first-of-type{font-size:1.18rem;line-height:1.65}
 footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--lines);font-size:.82rem;color:var(--faded)}
 
 /* ---- Space touches ---- */
-body::before{content:"";position:fixed;left:-25%;right:-25%;top:-95vh;height:100vh;border-radius:50%;
-  box-shadow:0 0 90px 10px rgba(60,198,242,.16),0 2px 0 0 rgba(60,198,242,.25);pointer-events:none;z-index:-1}
 body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opacity:.8;
   background-image:
     radial-gradient(1px 1px at 7% 22%,#fff 50%,transparent 51%),
@@ -100,4 +97,4 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opa
   main{padding:2.2rem 1.4rem 2.5rem}
   p:has(> strong:first-child){display:block}
 }
-@media print{.side{display:none}.shell{display:block}body{background:#fff;color:#000}body::before,body::after{display:none}}
+@media print{.side{display:none}.shell{display:block}body{background:#fff;color:#000}body::after{display:none}}
