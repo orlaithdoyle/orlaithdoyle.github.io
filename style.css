@@ -110,7 +110,9 @@ body{background-color:transparent}
 .side{background:rgba(255,255,255,.015)}
 
 /* Glowing orb at the top of the home page */
-.orb{display:block;width:100%;height:clamp(240px,34vw,340px);margin:-1.2rem 0 1.4rem}
+.orb-fig{margin:-.6rem 0 2rem;padding-bottom:1rem;border-bottom:1px solid var(--lines)}
+.orb{display:block;width:100%;height:clamp(230px,30vw,310px)}
+.orb-fig figcaption{font-size:.85rem;font-style:italic;color:var(--faded);text-align:center;margin-top:.3rem}
 
 @media print{.side{display:none}.shell{display:block}body{background:#fff;color:#000}body::after{display:none}}
 main h2{clear:both}

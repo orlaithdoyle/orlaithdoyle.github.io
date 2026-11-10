@@ -30,7 +30,7 @@
   </div>
 </aside>
 <main>
-{% if page.url == "/" and site.orb %}<canvas class="orb" id="orb" aria-hidden="true"></canvas>{% endif %}
+{% if page.url == "/" and site.orb %}<figure class="orb-fig"><canvas class="orb" id="orb" aria-hidden="true"></canvas><figcaption>A radar satellite imaging strips of Earth as it orbits, passing over ground stations. Ireland in green.</figcaption></figure>{% endif %}
 {% if page.photo %}<img class="portrait" src="{{ page.photo | relative_url }}" alt="Photo of {{ site.name }}">{% endif %}
 {{ content }}
 <footer>{{ site.name }} &nbsp;/&nbsp; <a href="mailto:{{ site.email }}">{{ site.email }}</a></footer>

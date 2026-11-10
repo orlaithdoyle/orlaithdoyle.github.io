@@ -47,7 +47,7 @@
       return { x: Math.cos(la) * Math.cos(lo), y: -Math.sin(la), z: Math.cos(la) * Math.sin(lo), link: 0 };
     });
 
-  var SPIN = 0.00016, SAT_R = 1.62, SPEED = 0.00042, TILT = 0.55;
+  var SPIN = 0.00010, SAT_R = 1.62, SPEED = 0.00030, TILT = 0.55;
   // Turn the planet, then tip its north pole towards us so Europe is in view
   var TIPC = Math.cos(0.5), TIPS = Math.sin(0.5);
   function spin(p, a) {
@@ -74,13 +74,13 @@
     var imaging = foot[2] > -0.15 && !behind(S);
 
     ctx.clearRect(0, 0, W, H);
-    // soft glow behind the planet
-    var g = ctx.createRadialGradient(cx, cy, R * 0.2, cx, cy, R * 1.9);
-    g.addColorStop(0, 'rgba(170,80,255,0.26)'); g.addColorStop(1, 'rgba(170,80,255,0)');
-    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    var INK = '232,226,246';                       // off-white "ink" for lines
 
-    // planet points, lit up where the radar has imaged
-    ctx.globalCompositeOperation = 'lighter';
+    // outline of the planet, like a diagram
+    ctx.strokeStyle = 'rgba(' + INK + ',0.18)'; ctx.lineWidth = 1 * dpr;
+    ctx.beginPath(); ctx.arc(cx, cy, R * 1.01, 0, 6.283); ctx.stroke();
+
+    // planet dots: faint ocean, pale land, Ireland in green, imaged strips in pale blue
     var landQ = [];
     for (var j = 0; j < N; j++) {
       var p = pts[j], q = spin(p, a);
@@ -89,26 +89,20 @@
         if (dx * dx + dy * dy + dz * dz < 0.016) p.heat = 1;
       }
       p.heat *= 0.9975;
-      var depth = (q[2] + 1) / 2, h = p.heat;
-      var s = 1.05 * dpr * (0.5 + depth * 0.8) * (1 + h * 0.5) * (p.fine ? 0.85 : 1);
-      var hue = 268 - h * 95, light = 50 + depth * 14 + h * 18, alpha = 0.05 + depth * 0.28 + h * 0.45;
-      if (p.land === 1) { hue = 282 - h * 100; light = 68 + depth * 14 + h * 8; alpha = 0.14 + depth * 0.72 + h * 0.2; s *= 1.12; }
-      if (p.land === 2) { hue = 135; light = 52 + depth * 10; alpha = 0.3 + depth * 0.65; s *= 1.1; }
-      var col = 'hsla(' + hue + ',95%,' + light + '%,' + Math.min(alpha, 1) + ')';
-      if (p.land === 2) { landQ.push([q[0], q[1], s, col, p.land]); continue; }
+      if (q[2] < -0.05) continue;                 // only the side facing us
+      var depth = (q[2] + 1) / 2, h = p.heat, s = 1.0 * dpr * (0.6 + depth * 0.6) * (p.fine ? 0.85 : 1), col;
+      if (p.land === 2) { landQ.push([q[0], q[1], s * 1.1]); continue; }
+      if (p.land === 1) col = 'rgba(' + (h > 0.15 ? '170,205,235' : '214,206,236') + ',' + (0.25 + depth * 0.55) + ')';
+      else col = 'rgba(' + (h > 0.15 ? '150,190,230' : '140,128,190') + ',' + (h > 0.15 ? 0.25 + h * 0.4 : 0.10 + depth * 0.22) + ')';
       ctx.fillStyle = col;
       ctx.beginPath(); ctx.arc(cx + q[0] * R, cy + q[1] * R, s, 0, 6.283); ctx.fill();
     }
-    // Ireland drawn on top with normal blending so its dense dots stay green, not white
-    ctx.globalCompositeOperation = 'source-over';
-    landQ.sort(function (m, n) { return m[4] - n[4]; });
+    ctx.fillStyle = 'rgba(120,200,130,0.9)';
     for (var L2 = 0; L2 < landQ.length; L2++) {
-      var lq = landQ[L2]; ctx.fillStyle = lq[3];
-      ctx.beginPath(); ctx.arc(cx + lq[0] * R, cy + lq[1] * R, lq[2], 0, 6.283); ctx.fill();
+      var lq = landQ[L2]; ctx.beginPath(); ctx.arc(cx + lq[0] * R, cy + lq[1] * R, lq[2], 0, 6.283); ctx.fill();
     }
-    ctx.globalCompositeOperation = 'lighter';
 
-    // ground stations, and a link to the satellite when it is above their horizon
+    // ground stations: small triangles, a thin dashed line when the satellite is overhead
     for (var k = 0; k < stations.length; k++) {
       var st = stations[k], gp = spin(st, a);
       var sees = (gp[0] * S[0] + gp[1] * S[1] + gp[2] * S[2]) > 1.02;
@@ -116,58 +110,53 @@
       if (gp[2] < -0.05) continue;
       var gx = cx + gp[0] * R, gy = cy + gp[1] * R, vis = Math.min(1, (gp[2] + 0.05) * 3);
       if (st.link > 0.02 && !behind(S)) {
-        ctx.setLineDash([3 * dpr, 4 * dpr]); ctx.lineDashOffset = -t * 0.03;
-        ctx.strokeStyle = 'rgba(120,240,210,' + (0.75 * st.link * vis) + ')'; ctx.lineWidth = 1.1 * dpr;
+        ctx.setLineDash([2 * dpr, 4 * dpr]);
+        ctx.strokeStyle = 'rgba(' + INK + ',' + (0.55 * st.link * vis) + ')'; ctx.lineWidth = 0.8 * dpr;
         ctx.beginPath(); ctx.moveTo(gx, gy); ctx.lineTo(cx + S[0] * R, cy + S[1] * R); ctx.stroke();
         ctx.setLineDash([]);
       }
-      var pulse = st.link > 0.5 ? 0.5 + 0.5 * Math.sin(t * 0.012) : 0;
-      ctx.fillStyle = 'rgba(120,240,210,' + (0.25 * pulse) * vis + ')';
-      ctx.beginPath(); ctx.arc(gx, gy, (5 + 5 * pulse) * dpr, 0, 6.283); ctx.fill();
-      ctx.fillStyle = 'rgba(190,255,240,' + 0.8 * vis + ')';
-      ctx.beginPath(); ctx.moveTo(gx, gy - 2.6 * dpr); ctx.lineTo(gx + 2.3 * dpr, gy + 1.7 * dpr); ctx.lineTo(gx - 2.3 * dpr, gy + 1.7 * dpr); ctx.closePath(); ctx.fill();
+      ctx.strokeStyle = 'rgba(' + INK + ',' + 0.85 * vis + ')'; ctx.lineWidth = 0.9 * dpr;
+      ctx.beginPath(); ctx.moveTo(gx, gy - 2.8 * dpr); ctx.lineTo(gx + 2.5 * dpr, gy + 1.8 * dpr); ctx.lineTo(gx - 2.5 * dpr, gy + 1.8 * dpr); ctx.closePath(); ctx.stroke();
     }
 
-    // radar beam from the reflector down to the swath, with pulses travelling along it
+    // radar beam: two thin edge lines, a faint fill, and pulses drawn as short arcs
     if (imaging) {
       var sx = cx + S[0] * R, sy = cy + S[1] * R, fx = cx + foot[0] * R, fy = cy + foot[1] * R;
-      var ux = fx - sx, uy = fy - sy, L = Math.hypot(ux, uy), nx = -uy / L, ny = ux / L, wdt = 10 * dpr;
-      var bg = ctx.createLinearGradient(sx, sy, fx, fy);
-      bg.addColorStop(0, 'rgba(224,77,255,0.05)'); bg.addColorStop(1, 'rgba(224,77,255,0.32)');
-      ctx.fillStyle = bg; ctx.beginPath(); ctx.moveTo(sx, sy);
-      ctx.lineTo(fx + nx * wdt, fy + ny * wdt); ctx.lineTo(fx - nx * wdt, fy - ny * wdt); ctx.closePath(); ctx.fill();
-      for (var m = 0; m < 4; m++) {
-        var f = ((t * 0.0016) + m / 4) % 1, px = sx + ux * f, py = sy + uy * f, w2 = wdt * f;
-        ctx.strokeStyle = 'rgba(255,170,255,' + (0.85 * (1 - f * 0.6)) + ')'; ctx.lineWidth = 1.2 * dpr;
-        ctx.beginPath(); ctx.moveTo(px + nx * w2, py + ny * w2); ctx.lineTo(px - nx * w2, py - ny * w2); ctx.stroke();
+      var ux = fx - sx, uy = fy - sy, L = Math.hypot(ux, uy), nx = -uy / L, ny = ux / L, wdt = 9 * dpr;
+      ctx.fillStyle = 'rgba(' + INK + ',0.06)';
+      ctx.beginPath(); ctx.moveTo(sx, sy); ctx.lineTo(fx + nx * wdt, fy + ny * wdt); ctx.lineTo(fx - nx * wdt, fy - ny * wdt); ctx.closePath(); ctx.fill();
+      ctx.strokeStyle = 'rgba(' + INK + ',0.35)'; ctx.lineWidth = 0.7 * dpr;
+      ctx.beginPath(); ctx.moveTo(sx, sy); ctx.lineTo(fx + nx * wdt, fy + ny * wdt); ctx.moveTo(sx, sy); ctx.lineTo(fx - nx * wdt, fy - ny * wdt); ctx.stroke();
+      var ang = Math.atan2(uy, ux);
+      for (var m = 0; m < 3; m++) {
+        var f = ((t * 0.0012) + m / 3) % 1;
+        ctx.strokeStyle = 'rgba(' + INK + ',' + (0.6 * (1 - f * 0.7)) + ')'; ctx.lineWidth = 0.8 * dpr;
+        ctx.beginPath(); ctx.arc(sx, sy, L * f, ang - Math.atan(wdt / L), ang + Math.atan(wdt / L)); ctx.stroke();
       }
-      ctx.fillStyle = 'rgba(255,190,255,0.5)';
-      ctx.beginPath(); ctx.ellipse(fx, fy, wdt * 1.1, wdt * 0.45, Math.atan2(ny, nx), 0, 6.283); ctx.fill();
     }
-    ctx.globalCompositeOperation = 'source-over';
 
     drawSatellite(S, cx, cy, R);
     if (!still) requestAnimationFrame(draw);
   }
 
-  // A simple, everyday satellite: a box body, two solar panels and a small antenna
+  // A simple satellite drawn in outline: a box body, two solar panels and a small antenna
   function drawSatellite(p, cx, cy, R) {
     var x = cx + p[0] * R, y = cy + p[1] * R;
-    var near = (p[2] + SAT_R) / (2 * SAT_R), sc = dpr * (0.75 + near * 0.45);
+    var near = (p[2] + SAT_R) / (2 * SAT_R), sc = dpr * (0.75 + near * 0.4);
     ctx.save();
-    ctx.globalAlpha = behind(p) ? 0.18 : 1;
+    ctx.globalAlpha = behind(p) ? 0.15 : 1;
     ctx.translate(x, y); ctx.rotate(Math.atan2(p[1], p[0]) + Math.PI * 1.5);
-    ctx.shadowColor = 'rgba(214,150,255,0.9)'; ctx.shadowBlur = 12 * dpr;
-    ctx.fillStyle = '#8f7dff';
-    ctx.fillRect(-16 * sc, -3 * sc, 11 * sc, 6 * sc);
-    ctx.fillRect(5 * sc, -3 * sc, 11 * sc, 6 * sc);
-    ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 0.6 * sc;
-    for (var u = -13; u <= 13; u += 3) { if (Math.abs(u) > 4) { ctx.beginPath(); ctx.moveTo(u * sc, -3 * sc); ctx.lineTo(u * sc, 3 * sc); ctx.stroke(); } }
-    ctx.fillStyle = '#d9d2ee'; ctx.fillRect(-5 * sc, -0.6 * sc, 10 * sc, 1.2 * sc);
-    ctx.fillStyle = '#f3effc'; ctx.fillRect(-4 * sc, -4.5 * sc, 8 * sc, 9 * sc);
-    ctx.strokeStyle = '#f3effc'; ctx.lineWidth = 0.9 * sc;
+    ctx.lineWidth = 0.9 * dpr; ctx.strokeStyle = 'rgba(232,226,246,0.95)';
+    ctx.fillStyle = 'rgba(19,15,44,0.95)';          // page colour, so the drawing reads as line art
+    [[-16, -3, 11, 6], [5, -3, 11, 6], [-4, -4.5, 8, 9]].forEach(function (r) {
+      ctx.fillRect(r[0] * sc, r[1] * sc, r[2] * sc, r[3] * sc); ctx.strokeRect(r[0] * sc, r[1] * sc, r[2] * sc, r[3] * sc);
+    });
+    ctx.lineWidth = 0.5 * dpr; ctx.strokeStyle = 'rgba(232,226,246,0.55)';
+    [-12.3, -8.6, 8.6, 12.3].forEach(function (u) { ctx.beginPath(); ctx.moveTo(u * sc, -3 * sc); ctx.lineTo(u * sc, 3 * sc); ctx.stroke(); });
+    ctx.beginPath(); ctx.moveTo(-5 * sc, 0); ctx.lineTo(-4 * sc, 0); ctx.moveTo(4 * sc, 0); ctx.lineTo(5 * sc, 0); ctx.stroke();
+    ctx.lineWidth = 0.9 * dpr; ctx.strokeStyle = 'rgba(232,226,246,0.95)';
     ctx.beginPath(); ctx.moveTo(0, -4.5 * sc); ctx.lineTo(0, -8 * sc); ctx.stroke();
-    ctx.fillStyle = '#e04dff'; ctx.beginPath(); ctx.arc(0, -8.6 * sc, 1.6 * sc, 0, 6.283); ctx.fill();
+    ctx.beginPath(); ctx.arc(0, -9 * sc, 1.2 * sc, 0, 6.283); ctx.stroke();
     ctx.restore();
   }
 
