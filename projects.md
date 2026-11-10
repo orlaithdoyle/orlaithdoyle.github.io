@@ -6,26 +6,26 @@ title: Projects
 
 Code for my ESA work is on [GitHub](https://github.com/orlaithdoyle/Biomass_ocean).
 
-### Sea surface salinity from BIOMASS
+### Sea surface salinity from Biomass
 *ESA ESTEC and MSc thesis, 2026*
 
-BIOMASS is ESA's first P-band radar satellite. I built a pipeline that takes its Level 1 products, compares the HH and VV polarisations, corrects for wind roughening of the sea surface using ERA5, and converts the result to salinity using a dielectric model of seawater. I checked each scene against the SMOS satellite and the GLORYS12 ocean model. For the best scene, in the South Atlantic, my estimate came within 0.4 psu of GLORYS12.
+Biomass is ESA's first P-band radar satellite. I built a pipeline that takes its Level 1 products, compares the HH and VV polarisations, corrects for wind roughening of the sea surface using ERA5, and converts the result to salinity using a dielectric model of seawater. I checked each scene against the SMOS satellite and the GLORYS12 ocean model. For the best scene, in the South Atlantic, my estimate came within 0.4 psu of GLORYS12.
 
 Along the way I found that one product format stored its image bands in the opposite order to its own metadata, which had been swapping HH and VV without anyone noticing.
 
 <!--
-![Salinity map from BIOMASS](photos/biomass.png)
-*Salinity retrieved from a BIOMASS scene.*
+![Salinity map from Biomass](photos/biomass.png)
+*Salinity retrieved from a Biomass scene.*
 -->
 
-### Mapping everywhere BIOMASS has looked
+### Mapping everywhere Biomass has looked
 *ESA ESTEC, 2026*
 
-A script that works through the whole BIOMASS catalogue (over 220,000 products), finds the roughly 5,000 unique places imaged, and sorts them into ocean, coast and land. It made finding good ocean scenes much quicker. It can be stopped and restarted without losing progress, which mattered because a full run takes most of a day.
+A script that works through the whole Biomass catalogue (over 220,000 products), finds the roughly 5,000 unique places imaged, and sorts them into ocean, coast and land. It made finding good ocean scenes much quicker. It can be stopped and restarted without losing progress, which mattered because a full run takes most of a day.
 
 <!--
-![World map of BIOMASS swaths](photos/swath-map.png)
-*Every location BIOMASS had imaged, sorted by ocean, coast and land.*
+![World map of Biomass swaths](photos/swath-map.png)
+*Every location Biomass had imaged, sorted by ocean, coast and land.*
 -->
 
 ### An ocean front in the Pacific

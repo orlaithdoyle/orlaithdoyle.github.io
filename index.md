@@ -5,7 +5,7 @@ photo: photo.jpg
 
 I'm a space science graduate from Ireland. I work with radar satellite data, mostly over the ocean.
 
-From May to October 2026 I was an intern at ESA's ESTEC centre in the Netherlands, on the BIOMASS mission. BIOMASS was built to measure forests, and I spent my time testing whether it could also measure how salty the sea is.
+From May to October 2026 I was an intern at ESA's ESTEC centre in the Netherlands, on the Biomass mission. Biomass was built to measure forests, and I spent my time testing whether it could also measure how salty the sea is.
 
 Before that I did an MSc in Space Science and Technology at UCD and a BSc in Physics with Astronomy at DCU.
 
@@ -20,7 +20,7 @@ If you're hiring, my [quick answers page](faq.html) covers availability, locatio
 
 ## Recently
 
-- Finished my internship on BIOMASS at ESA ESTEC (October 2026)
+- Finished my internship on Biomass at ESA ESTEC (October 2026)
 - Put my internship code on [GitHub](https://github.com/orlaithdoyle/Biomass_ocean)
-- Finished my MSc at UCD, with my thesis on BIOMASS ocean salinity
+- Finished my MSc at UCD, with my thesis on Biomass ocean salinity
 - Helped out at ESA's CanSat finals and visited Irish schools to talk about space

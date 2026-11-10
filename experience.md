@@ -4,11 +4,11 @@ title: Experience
 
 # Experience
 
-### Earth Observation Intern, BIOMASS mission
+### Earth Observation Intern, Biomass mission
 *European Space Agency, ESTEC, Noordwijk. May to October 2026*
 
 - Built and validated a sea surface salinity retrieval pipeline for P-band SAR
-- Wrote a scanner that catalogued every location BIOMASS has imaged
+- Wrote a scanner that catalogued every location Biomass has imaged
 - Found a band order mismatch that was corrupting polarisation data
 - Prepared cal/val site files for my supervisor's team
 - Science and CAD work on the YPSat-2 payload

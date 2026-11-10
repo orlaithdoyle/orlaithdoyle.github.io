@@ -40,6 +40,48 @@
   ring(420, 1.75, 0.32, 1);
   ring(260, 2.25, 0.32, 2);
 
+
+  // A small satellite on its own tilted orbit, with a fading trail.
+  var INC = 1.05, SAT_R = 1.38, SPEED = 0.00045;
+  function satPos(t) {
+    var a = t * SPEED;
+    return [Math.cos(a) * SAT_R, Math.sin(a) * SAT_R * Math.sin(INC) * -0.55 + Math.cos(a) * 0.18,
+            Math.sin(a) * SAT_R * Math.cos(INC)];
+  }
+  function hidden(p) { // behind the planet?
+    return p[2] < 0 && (p[0] * p[0] + p[1] * p[1]) < 1;
+  }
+  function drawSatellite(t, cx, cy, R) {
+    // trail
+    for (var k = 28; k > 0; k--) {
+      var q = satPos(t - k * 45);
+      if (hidden(q)) continue;
+      ctx.fillStyle = 'rgba(224,170,255,' + (0.35 * (1 - k / 28)) + ')';
+      ctx.beginPath(); ctx.arc(cx + q[0] * R, cy + q[1] * R, 1.2 * dpr, 0, 6.283); ctx.fill();
+    }
+    var p = satPos(t), ahead = satPos(t + 60);
+    var x = cx + p[0] * R, y = cy + p[1] * R;
+    var ang = Math.atan2((ahead[1] - p[1]), (ahead[0] - p[0]));
+    var near = (p[2] + SAT_R) / (2 * SAT_R);
+    var sc = dpr * (0.75 + near * 0.5);
+    ctx.save();
+    ctx.globalAlpha = hidden(p) ? 0.18 : 1;
+    ctx.translate(x, y); ctx.rotate(ang + Math.PI / 2);
+    ctx.shadowColor = 'rgba(214,150,255,0.9)'; ctx.shadowBlur = 14 * dpr;
+    // solar panels
+    ctx.fillStyle = '#8f7dff';
+    ctx.fillRect(-15 * sc, -2.6 * sc, 10 * sc, 5.2 * sc);
+    ctx.fillRect(5 * sc, -2.6 * sc, 10 * sc, 5.2 * sc);
+    ctx.strokeStyle = 'rgba(255,255,255,0.55)'; ctx.lineWidth = 0.6 * sc;
+    for (var u = -12; u <= 12; u += 3) { if (Math.abs(u) > 4) { ctx.beginPath(); ctx.moveTo(u * sc, -2.6 * sc); ctx.lineTo(u * sc, 2.6 * sc); ctx.stroke(); } }
+    // body and antenna
+    ctx.fillStyle = '#f3effc';
+    ctx.fillRect(-4 * sc, -4 * sc, 8 * sc, 8 * sc);
+    ctx.fillStyle = '#e04dff';
+    ctx.beginPath(); ctx.arc(0, -6 * sc, 1.6 * sc, 0, 6.283); ctx.fill();
+    ctx.restore();
+  }
+
   function size() {
     c.width = c.clientWidth * dpr; c.height = c.clientHeight * dpr;
   }
@@ -63,6 +105,7 @@
       ctx.beginPath(); ctx.arc(cx + x * R, cy + y * R, s, 0, 6.283); ctx.fill();
     }
     ctx.globalCompositeOperation = 'source-over';
+    drawSatellite(t, cx, cy, R);
     if (!still) requestAnimationFrame(draw);
   }
   size(); window.addEventListener('resize', size);

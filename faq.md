@@ -26,9 +26,9 @@ No. I'm an Irish citizen, so I can work anywhere in the EU, and in the UK as wel
 
 Radar satellites see through cloud and work at night, so they keep watching when optical satellites can't. There's also still a lot to work out about what radar can measure, which is what I enjoy about it.
 
-### What is BIOMASS, in plain words?
+### What is Biomass, in plain words?
 
-BIOMASS is an ESA satellite launched in 2025. It carries a P-band radar, which uses much longer radio waves than other radar satellites. That lets it see down through forest canopies to measure how much wood is in the world's forests, which matters for tracking carbon. During my internship I tested whether the same data could tell us how salty the sea surface is.
+Biomass is an ESA satellite launched in 2025. It carries a P-band radar, which uses much longer radio waves than other radar satellites. That lets it see down through forest canopies to measure how much wood is in the world's forests, which matters for tracking carbon. During my internship I tested whether the same data could tell us how salty the sea surface is.
 
 ### What are you best at?
 
