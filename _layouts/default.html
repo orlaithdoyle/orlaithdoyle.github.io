@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
+<meta name="description" content="{{ site.name }} ({{ site.irish_name }}). Space science graduate working with radar satellite data. Recently an ESA ESTEC intern on the BIOMASS mission.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body>
+<div class="page">
+<header>
+  <p class="name"><a href="{{ '/' | relative_url }}">{{ site.name }}</a> <small>{{ site.irish_name }}</small></p>
+  <nav>{% for item in site.menu %}<a href="{{ item.link | relative_url }}"{% if page.url == item.link %} aria-current="page"{% endif %}>{{ item.label }}</a> {% endfor %}</nav>
+</header>
+<main>
+{% if page.photo %}<img class="portrait" src="{{ page.photo | relative_url }}" alt="Photo of {{ site.name }}">{% endif %}
+{{ content }}
+</main>
+<hr>
+<footer>
+  <a href="mailto:{{ site.email }}">{{ site.email }}</a> &nbsp;|&nbsp;
+  <a href="{{ site.linkedin }}">LinkedIn</a> &nbsp;|&nbsp;
+  <a href="{{ site.github }}">GitHub</a> &nbsp;|&nbsp;
+  <a href="{{ site.cv | relative_url }}">CV</a>
+</footer>
+</div>
+</body>
+</html>
