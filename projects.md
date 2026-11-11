@@ -18,6 +18,9 @@ Biomass is ESA's first P-band SAR mission. I developed a pipeline that takes its
 
 In the course of this work I identified that one product format stored its image bands in the reverse order to its own metadata, which had been silently swapping the HH and VV channels.
 
+![Slide comparing SMOS and SMAP with Biomass for measuring salinity](photos/slide-biomass-vs-smos.jpg)
+*Why try P-band SAR for salinity: Biomass resolves coastal detail that the 40 to 60 km SMOS and SMAP footprints smooth out. From my final internship presentation.*
+
 The main conclusions were that both amplitude and phase respond to salinity as theory predicts, but that surface roughness from wind, swell, fronts and slicks changes the signal more than salinity does. Biomass can itself detect much of that roughness through wave spectra, coherence and H/α decomposition, so the data could help correct for it. Promising targets for further work include small rivers with sharp salinity contrasts, such as the Moulouya (Morocco), Magdalena (Colombia) and Rioni (Georgia) plumes.
 
 ![HH-VV phase from Biomass beside SMOS salinity for the same swath at the Amazon mouth](photos/biomass-amazon-salinity.jpg)
@@ -59,15 +62,41 @@ While searching for salinity signals, I catalogued the other ocean features that
 
 Flagging these features before retrieval is one of the main recommendations from my internship.
 
+[![Ocean fronts in Biomass imagery](photos/slide-fronts.jpg)](photos/slide-fronts.jpg)
+[![Cold pools in Biomass imagery](photos/slide-cold-pools.jpg)](photos/slide-cold-pools.jpg)
+[![Surface slicks in Biomass imagery](photos/slide-slicks.jpg)](photos/slide-slicks.jpg)
+
+*Fronts, cold pools and slicks in Biomass scenes. Select an image to view it at full size.*
+
+![Slide on a large dark patch in a Pacific Biomass scene caused by heavy rain](photos/slide-pacific-dark-patch.jpg)
+*A large dark patch in an El Niño Pacific scene, traced to heavy rain and a rain-driven gust front using IMERG and ERA5.*
+
+### Beyond the ocean
+*ESA ESTEC, 2026*
+
+Smaller explorations of what P-band can see on land and ice, including the Richat Structure (the "Eye of the Sahara") and ice shelf movement and fault lines.
+
+[![The Richat Structure in Biomass imagery](photos/slide-richat.jpg)](photos/slide-richat.jpg)
+[![Ice shelf movement in Biomass imagery](photos/slide-ice.jpg)](photos/slide-ice.jpg)
+[![A selection of favourite Biomass images](photos/slide-favourite-images.jpg)](photos/slide-favourite-images.jpg)
+
+*The Richat Structure, ice shelf movement, and some of my favourite Biomass images.*
+
 ### Ship detection
 *ESA ESTEC, 2026*
 
 A short side project on spotting ships in Biomass ocean scenes.
 
+![Ship detection in Biomass imagery, matched to a vessel's AIS position](photos/slide-ship-detection.jpg)
+*A ship and its wake in Biomass phase and amplitude images, matched to the vessel's AIS position.*
+
 ### HH-VV phase over the Amazon plume
 *ESA ESTEC, 2026*
 
 An analysis of the HH-VV phase difference off the mouth of the Amazon, examining its stability between repeat passes and comparing it with SMOS and SMAP salinity.
+
+![Biomass phase maps of the Demerara river plume off Guyana](photos/slide-demerara-plume.jpg)
+*The Demerara river plume, Guyana: inland rivers also showed up in the phase difference, a first hint that fresh water may carry a distinct signal.*
 
 **Tools:** Python, SMOS, SMAP
 

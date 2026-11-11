@@ -1,12 +1,14 @@
 # ============================================================
 #  SKILLS PAGE
-#  Each skill has: name, what (one or two lines), used (links).
+#  Each group has a short list of tools (shown in the summary at the top)
+#  and skills. Each skill has: name, what (one or two lines), used (links).
 #  To add a skill, copy a block starting with "- name:" and edit it.
 # ============================================================
 
 
 groups:
   - title: Earth observation and remote sensing
+    tools: ["SAR and polarimetry", "InSAR", "Sentinel-1, -2, -3", "SWOT", "SMOS and SMAP", "GLORYS12, ERA5, OSTIA", "ESA MAAP and STAC", "Copernicus Marine", "QGIS"]
     skills:
       - name: SAR processing
         what: "Six months of work with Biomass P-band Level 1 products: reading GeoTIFF and annotation files, calibration checks, multilooking, speckle reduction and land masking across differing acquisition geometries."
@@ -53,6 +55,7 @@ groups:
         used:
           - {label: Experience, link: /experience.html}
   - title: Programming and data
+    tools: ["Python", "NumPy and xarray", "SciPy", "Matplotlib and Plotly", "Cartopy", "Jupyter", "Git and GitHub", "LaTeX", "MicroPython"]
     skills:
       - name: Python for science
         what: "NumPy, xarray, SciPy, tifffile and lxml, in Jupyter notebooks structured so that a new scene can be processed by editing a single configuration cell."
@@ -89,6 +92,7 @@ groups:
           - {label: Internship report, link: /files/Doyle_ESA_Biomass_Internship_Report_2026.pdf}
 
   - title: Space systems and operations
+    tools: ["Mission control software", "Grafana", "GMAT", "ECSS design reviews", "Raspberry Pi Pico", "CAD", "Gamma-ray detectors"]
     skills:
       - name: Spacecraft operations
         what: "Pass planning, real-time commanding through mission control software, Grafana telemetry monitoring, data downlink and recovery from safe mode."
@@ -121,6 +125,7 @@ groups:
           - {label: YPSat-2 valve, link: /projects.html#ypsat-2-valve-mechanism}
 
   - title: Working with people
+    tools: ["Project management", "Technical writing", "Presenting", "Teaching", "English and Irish"]
     skills:
       - name: Project management
         what: "Led a five-person team through planning, design reviews, build and flight, managing the schedule and project documentation."
