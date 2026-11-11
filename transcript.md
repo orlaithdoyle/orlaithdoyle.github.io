@@ -1,10 +1,10 @@
 ---
-title: Transcript
+title: Transcripts
 description: "Modules studied by Orlaith Doyle: MSc Space Science and Technology (UCD) and BSc Physics with Astronomy (DCU)."
 noindex: true
 ---
 
-# Transcript
+# Transcripts
 
 The modules I studied and what each one covered. Official transcripts from UCD and DCU are available on request.
 

@@ -27,4 +27,4 @@ Second Class Honours, Grade 1 (2.1). Final year thesis on orbital modelling and 
 
 Subjects: Irish, English, Biology, Geography, Economics and French at Higher Level, and Mathematics at Ordinary Level. Chemistry and Applied Mathematics were also taken as additional subjects.
 
-A full list of modules, with a summary of each, is on the [transcript page](transcript.html). Licences and certificates are listed on the [certificates page](certificates.html).
+A full list of modules, with a summary of each, is on the [transcripts page](transcript.html). Licences and certificates are listed on the [certificates page](certificates.html).
