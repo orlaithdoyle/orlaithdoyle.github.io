@@ -30,10 +30,4 @@ From 2016 to 2019 I coached at Blessington GAA, first with the children in the c
 
 ## Skills
 
-**Remote sensing:** SAR, InSAR, polarimetric SAR, Sentinel-1 and Sentinel-2, SWOT, SMOS and SMAP salinity products.
-
-**Programming:** Python (NumPy, xarray, Matplotlib, Plotly), Jupyter, STAC APIs, ESA MAAP, Copernicus Marine, LaTeX.
-
-**Engineering:** mission design, satellite subsystems, CAD, high-altitude balloon flight, drone operation (A1/A3).
-
-**Other:** project management, teaching, outreach. I speak English and Irish.
+My skills, and the projects where I used them, are on the [skills page](skills.html).

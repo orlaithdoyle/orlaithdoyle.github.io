@@ -28,6 +28,8 @@ menu:
     link: /about.html
   - label: Projects
     link: /projects.html
+  - label: Skills
+    link: /skills.html
   - label: Experience
     link: /experience.html
   - label: Education
