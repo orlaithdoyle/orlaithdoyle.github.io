@@ -25,4 +25,6 @@ Second Class Honours, Grade 1. Final year thesis on modelling orbits and launch 
 
 Over 500 CAO points. Coláiste Íosagáin is an all-Irish secondary school, so I studied all my subjects through Irish.
 
+Subjects: Irish, English, Biology, Geography, Economics and French at Higher Level, and Maths at Ordinary Level.
+
 A full list of my modules, and what each covered, is on my [transcript page](transcript.html), and my licences and certificates are on the [certificates page](certificates.html).
