@@ -179,3 +179,11 @@ strong{color:#fff}
 body{color:#f1edfb}
 /* "Tools:" lines inside projects: label sits right next to the list */
 .panel p:has(> strong:first-child){grid-template-columns:auto minmax(0,1fr);column-gap:.6rem;font-size:1rem;color:var(--faded)}
+
+/* Selected work list on the home page */
+main dl{margin:.6rem 0 1.2rem}
+main dl dt{font-size:1.22rem;font-weight:700;line-height:1.3;margin:1.3rem 0 .25rem;padding-left:1rem;border-left:2px solid var(--accent)}
+main dl dt:first-child{margin-top:.4rem}
+main dl dt a{color:#fff;text-decoration:none}
+main dl dt a:hover{color:var(--links);text-decoration:underline}
+main dl dd{margin:0;padding-left:1.12rem;color:var(--faded);font-size:1.02rem;line-height:1.55;max-width:60ch}
