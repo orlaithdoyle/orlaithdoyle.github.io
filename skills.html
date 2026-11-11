@@ -5,20 +5,16 @@ description: "Skills of Orlaith Doyle: SAR and radar remote sensing, Python and 
 
 <h1>Skills</h1>
 
-<p>What I can do, how much I've used it, and where.</p>
+<p>What I can do, and the work where I did it.</p>
 
-<p class="legend">
-{%- for l in site.data.skills.levels -%}
-<span class="lvl lvl-{{ l[0] | slugify }}">{{ l[0] }}</span><span class="legend-text">{{ l[1] }}</span>
-{%- endfor -%}
-</p>
+<p class="glance"><strong>At a glance:</strong> Python (NumPy, xarray, SciPy, Matplotlib, Plotly, Cartopy) · Jupyter · Git and GitHub · LaTeX · ESA MAAP and STAC · Copernicus Marine · SAR and polarimetry · Sentinel-1, -2 and -3 · SWOT · SMOS and SMAP · GMAT · MicroPython · Grafana · CAD</p>
 
 {% for g in site.data.skills.groups %}
 <h2>{{ g.title }}</h2>
 <div class="skill-list">
 {%- for s in g.skills -%}
 <div class="skill">
-  <div class="skill-head"><span class="skill-name">{{ s.name }}</span><span class="lvl lvl-{{ s.level | slugify }}">{{ s.level }}</span></div>
+  <div class="skill-head"><span class="skill-name">{{ s.name }}</span></div>
   <p class="skill-what">{{ s.what }}</p>
   {%- if s.used.size > 0 -%}<p class="skill-used">Used in: {% for u in s.used %}<a href="{{ u.link | relative_url }}">{{ u.label }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</p>{%- endif -%}
 </div>

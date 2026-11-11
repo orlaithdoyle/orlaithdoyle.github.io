@@ -1,97 +1,89 @@
 # ============================================================
 #  SKILLS PAGE
-#  Each skill has: name, level, what (one or two lines), used (links).
-#  Levels: Experienced, Working knowledge, Introductory
+#  Each skill has: name, what (one or two lines), used (links).
 #  To add a skill, copy a block starting with "- name:" and edit it.
 # ============================================================
 
-levels:
-  Experienced: Used day to day over several months on real work.
-  Working knowledge: Used properly in at least one full project.
-  Introductory: Used in coursework or a short piece of work.
 
 groups:
   - title: Earth observation and remote sensing
     skills:
       - name: SAR processing
-        level: Experienced
         what: Six months working with Biomass P-band Level 1 products. Reading GeoTIFF and annotation files, calibration checks, multilooking, speckle reduction and land masking across different acquisition geometries.
         used:
           - {label: Salinity from Biomass, link: /projects.html#sea-surface-salinity-from-biomass}
           - {label: Amazon plume, link: /projects.html#hh-vv-phase-over-the-amazon-plume}
       - name: SAR polarimetry
-        level: Working knowledge
         what: HH and VV co-polar phase difference, Pauli RGB composites and Cloude-Pottier H/α decomposition, used to separate surface scattering from other effects.
         used:
           - {label: Pacific ocean front, link: /projects.html#an-ocean-front-in-the-pacific}
           - {label: Salinity from Biomass, link: /projects.html#sea-surface-salinity-from-biomass}
       - name: Geophysical retrieval and validation
-        level: Working knowledge
         what: Inverting a Fresnel and Debye dielectric model for salinity, correcting for wind roughness, and checking results against satellite and model data with bias and scatter statistics.
         used:
           - {label: Salinity from Biomass, link: /projects.html#sea-surface-salinity-from-biomass}
+      - name: Ocean surface physics
+        what: Wave spectra (Elfouhaily), two-scale Bragg scattering and how wind and swell roughen the sea surface, used to work out what was confusing the salinity signal.
+        used:
+          - {label: Pacific ocean front, link: /projects.html#an-ocean-front-in-the-pacific}
       - name: Ocean and atmosphere datasets
-        level: Working knowledge
         what: SMOS, SMAP, GLORYS12, OSTIA, ERA5 and Sentinel-3 SST, accessed through Copernicus Marine and other portals, matched in time and space to radar scenes.
         used:
           - {label: Salinity from Biomass, link: /projects.html#sea-surface-salinity-from-biomass}
           - {label: Pacific ocean front, link: /projects.html#an-ocean-front-in-the-pacific}
       - name: Optical imagery and altimetry
-        level: Working knowledge
         what: Sentinel-2 for signs of algae and SWOT for lake water levels, compared with local rainfall and gauge records.
         used:
           - {label: Blessington Lakes, link: /projects.html#blessington-lakes-from-space}
       - name: InSAR and Sentinel-1
-        level: Introductory
         what: Ground deformation at volcanoes, peatland monitoring, ship detection and the 2025 Myanmar earthquake.
         used:
           - {label: Coursework, link: /projects.html#other-coursework}
       - name: Data discovery and access
-        level: Experienced
         what: Searching ESA MAAP through its STAC API, token-based authentication, and batch downloads that skip files already on disk.
         used:
           - {label: Mapping the Biomass catalogue, link: /projects.html#mapping-everywhere-biomass-has-looked}
       - name: Mapping and geospatial outputs
-        level: Working knowledge
         what: Cartopy maps with Natural Earth data, footprint and coverage maps, and KML files for Google Earth.
         used:
           - {label: Mapping the Biomass catalogue, link: /projects.html#mapping-everywhere-biomass-has-looked}
 
+      - name: Cal/val site files
+        what: Built KML files of calibration and validation sites for my supervisor's team, labelled by project ID so they open cleanly in Google Earth.
+        used:
+          - {label: Experience, link: /experience.html}
   - title: Programming and data
     skills:
       - name: Python for science
-        level: Experienced
         what: NumPy, xarray, SciPy, tifffile and lxml, written in Jupyter notebooks that can be rerun on a new scene by changing one cell.
         used:
           - {label: Code on GitHub, link: "https://github.com/orlaithdoyle/Biomass_ocean"}
       - name: Data visualisation
-        level: Experienced
         what: Matplotlib figures for reports and posters, and interactive 3D surfaces in Plotly.
         used:
           - {label: Poster, link: /files/Doyle_Biomass_Internship_Poster_2026.pdf}
       - name: Reliable pipelines
-        level: Working knowledge
         what: Long jobs that checkpoint their progress, reconnect after network errors and resume where they stopped, which mattered for an 8 to 11 hour catalogue scan.
         used:
           - {label: Mapping the Biomass catalogue, link: /projects.html#mapping-everywhere-biomass-has-looked}
       - name: Signal and data analysis
-        level: Working knowledge
         what: FFT cross-spectra for wave direction and wavelength, Gaussian peak fitting, energy calibration and efficiency measurements.
         used:
           - {label: Pacific ocean front, link: /projects.html#an-ocean-front-in-the-pacific}
           - {label: Gamma-ray detectors, link: /projects.html#comparing-gamma-ray-detectors}
       - name: Orbit modelling
-        level: Working knowledge
         what: Python simulations of planetary orbits and transfer windows from NASA JPL data, and orbit set-up in GMAT.
         used:
           - {label: Launch windows to Jupiter, link: /projects.html#launch-windows-to-jupiter-and-beyond}
       - name: Embedded code
-        level: Introductory
         what: MicroPython on a Raspberry Pi Pico for sensor logging and telemetry on a balloon payload.
         used:
           - {label: SQRT balloon, link: /projects.html#sqrt-high-altitude-balloon}
+      - name: Careful use of AI tools
+        what: Used ESA's LUNA assistant and Copilot for troubleshooting and tidying code, while writing the physics and analysis myself, and documented that use openly in my reports.
+        used:
+          - {label: Internship report, link: /files/Doyle_ESA_Biomass_Internship_Report_2026.pdf}
       - name: Version control and documents
-        level: Experienced
         what: Git and GitHub, LaTeX on Overleaf for reports with code appendices, and clear notebook documentation.
         used:
           - {label: Internship report, link: /files/Doyle_ESA_Biomass_Internship_Report_2026.pdf}
@@ -99,32 +91,31 @@ groups:
   - title: Space systems and operations
     skills:
       - name: Spacecraft operations
-        level: Working knowledge
         what: Pass planning, real-time commanding through mission control software, Grafana telemetry monitoring, data downlink and recovery from safe mode.
         used:
           - {label: EIRSAT-1 mission test, link: /projects.html#eirsat-1-mission-test}
       - name: Mission and instrument design
-        level: Working knowledge
         what: Turning a science goal into requirements, then designing the instrument and spacecraft to meet them.
         used:
           - {label: TiNi mission concept, link: /projects.html#tini-a-gamma-ray-mission-concept}
       - name: Systems engineering
-        level: Working knowledge
         what: Writing and reviewing project documents through preliminary design, critical design and flight acceptance reviews, including verification and test plans.
         used:
           - {label: SQRT balloon, link: /projects.html#sqrt-high-altitude-balloon}
       - name: Payload build, flight and recovery
-        level: Working knowledge
         what: Integration, launch day operations, live tracking, recovery and post-flight analysis of a stratospheric payload.
         used:
           - {label: SQRT balloon, link: /projects.html#sqrt-high-altitude-balloon}
       - name: Radiation detectors
-        level: Working knowledge
         what: Testing CdTe, NaI(Tl) and BGO gamma-ray detectors with radioactive sources, and judging which suits which space instrument.
         used:
           - {label: Gamma-ray detectors, link: /projects.html#comparing-gamma-ray-detectors}
+      - name: Planetary and astrophysics background
+        what: Comparing Titan's methane rivers and lakes with Earth's using Cassini-Huygens data, and the gamma-ray signatures of Type Ia supernovae.
+        used:
+          - {label: Titan and Earth, link: /projects.html#titan-and-earth-rivers-and-lakes}
+          - {label: TiNi mission concept, link: /projects.html#tini-a-gamma-ray-mission-concept}
       - name: CAD
-        level: Introductory
         what: Contributing to the design of a valve mechanism for a satellite payload.
         used:
           - {label: YPSat-2 valve, link: /projects.html#ypsat-2-valve-mechanism}
@@ -132,22 +123,27 @@ groups:
   - title: Working with people
     skills:
       - name: Project management
-        level: Working knowledge
         what: Led a five-person team through planning, design reviews, build and flight, keeping the schedule and documents on track.
         used:
           - {label: SQRT balloon, link: /projects.html#sqrt-high-altitude-balloon}
       - name: Technical writing
-        level: Experienced
         what: Long technical reports, design documents, an A0 conference-style poster and slide decks.
         used:
           - {label: Projects, link: /projects.html}
+      - name: Presenting
+        what: A0 poster at the UCD poster session, our team's flight acceptance review, a Blessington Lakes talk, and talks to school groups.
+        used:
+          - {label: Poster, link: /files/Doyle_Biomass_Internship_Poster_2026.pdf}
+          - {label: SQRT review slides, link: /files/sqrt/SQRT_Flight_Acceptance_Review_Slides.pdf}
+      - name: Working in an international team
+        what: Six months in ESA's Earth Observation department at ESTEC, with weekly Biomass training from DLR, and on a cross-team young professionals payload.
+        used:
+          - {label: Experience, link: /experience.html}
       - name: Teaching and outreach
-        level: Experienced
         what: Running my own physics and maths tutoring since 2024, ESA school visits and technical support at CanSat.
         used:
           - {label: Volunteering, link: /volunteering.html}
           - {label: Experience, link: /experience.html}
       - name: Languages
-        level: Experienced
         what: English and Irish.
         used: []
