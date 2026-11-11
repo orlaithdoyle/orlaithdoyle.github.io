@@ -9,141 +9,141 @@ groups:
   - title: Earth observation and remote sensing
     skills:
       - name: SAR processing
-        what: Six months of work with Biomass P-band Level 1 products: reading GeoTIFF and annotation files, calibration checks, multilooking, speckle reduction and land masking across differing acquisition geometries.
+        what: "Six months of work with Biomass P-band Level 1 products: reading GeoTIFF and annotation files, calibration checks, multilooking, speckle reduction and land masking across differing acquisition geometries."
         used:
           - {label: Salinity from Biomass, link: /projects.html#sea-surface-salinity-from-biomass}
           - {label: Amazon plume, link: /projects.html#hh-vv-phase-over-the-amazon-plume}
       - name: SAR polarimetry
-        what: HH and VV co-polar phase difference, Pauli RGB composites and Cloude-Pottier H/α decomposition, used to separate surface scattering from other effects.
+        what: "HH and VV co-polar phase difference, Pauli RGB composites and Cloude-Pottier H/α decomposition, used to separate surface scattering from other effects."
         used:
           - {label: Pacific ocean front, link: /projects.html#an-ocean-front-in-the-pacific}
           - {label: Salinity from Biomass, link: /projects.html#sea-surface-salinity-from-biomass}
       - name: Geophysical retrieval and validation
-        what: Inverting a Fresnel and Debye dielectric model for salinity, correcting for wind roughness, and checking results against satellite and model data with bias and scatter statistics.
+        what: "Inverting a Fresnel and Debye dielectric model for salinity, correcting for wind roughness, and checking results against satellite and model data with bias and scatter statistics."
         used:
           - {label: Salinity from Biomass, link: /projects.html#sea-surface-salinity-from-biomass}
       - name: Ocean surface physics
-        what: Wave spectra (Elfouhaily), two-scale Bragg scattering and the effect of wind and swell on surface roughness, applied to identify what was masking the salinity signal.
+        what: "Wave spectra (Elfouhaily), two-scale Bragg scattering and the effect of wind and swell on surface roughness, applied to identify what was masking the salinity signal."
         used:
           - {label: Pacific ocean front, link: /projects.html#an-ocean-front-in-the-pacific}
       - name: Ocean and atmosphere datasets
-        what: SMOS, SMAP, GLORYS12, OSTIA, ERA5 and Sentinel-3 SST, accessed through Copernicus Marine and other portals, matched in time and space to radar scenes.
+        what: "SMOS, SMAP, GLORYS12, OSTIA, ERA5 and Sentinel-3 SST, accessed through Copernicus Marine and other portals, matched in time and space to radar scenes."
         used:
           - {label: Salinity from Biomass, link: /projects.html#sea-surface-salinity-from-biomass}
           - {label: Pacific ocean front, link: /projects.html#an-ocean-front-in-the-pacific}
       - name: Optical imagery and altimetry
-        what: Sentinel-2 for algal activity and SWOT for reservoir water levels, compared with local rainfall and gauge records.
+        what: "Sentinel-2 for algal activity and SWOT for reservoir water levels, compared with local rainfall and gauge records."
         used:
           - {label: Blessington Lakes, link: /projects.html#blessington-lakes-from-space}
       - name: InSAR and Sentinel-1
-        what: Ground deformation at volcanoes, peatland monitoring, ship detection and the 2025 Myanmar earthquake.
+        what: "Ground deformation at volcanoes, peatland monitoring, ship detection and the 2025 Myanmar earthquake."
         used:
           - {label: Coursework, link: /projects.html#other-coursework}
       - name: Data discovery and access
-        what: Searching ESA MAAP through its STAC API, token-based authentication, and batch downloads that skip files already on disk.
+        what: "Searching ESA MAAP through its STAC API, token-based authentication, and batch downloads that skip files already on disk."
         used:
           - {label: Mapping the Biomass catalogue, link: /projects.html#mapping-everywhere-biomass-has-looked}
       - name: Mapping and geospatial outputs
-        what: Cartopy maps with Natural Earth data, footprint and coverage maps, and KML files for Google Earth.
+        what: "Cartopy maps with Natural Earth data, footprint and coverage maps, and KML files for Google Earth."
         used:
           - {label: Mapping the Biomass catalogue, link: /projects.html#mapping-everywhere-biomass-has-looked}
 
       - name: Cal/val site files
-        what: Produced KML files of calibration and validation sites for my supervisor's team, labelled by project ID for use in Google Earth.
+        what: "Produced KML files of calibration and validation sites for my supervisor's team, labelled by project ID for use in Google Earth."
         used:
           - {label: Experience, link: /experience.html}
   - title: Programming and data
     skills:
       - name: Python for science
-        what: NumPy, xarray, SciPy, tifffile and lxml, in Jupyter notebooks structured so that a new scene can be processed by editing a single configuration cell.
+        what: "NumPy, xarray, SciPy, tifffile and lxml, in Jupyter notebooks structured so that a new scene can be processed by editing a single configuration cell."
         used:
           - {label: Code on GitHub, link: "https://github.com/orlaithdoyle/Biomass_ocean"}
       - name: Data visualisation
-        what: Matplotlib figures for reports and posters, and interactive 3D surfaces in Plotly.
+        what: "Matplotlib figures for reports and posters, and interactive 3D surfaces in Plotly."
         used:
           - {label: Poster, link: /files/Doyle_Biomass_Internship_Poster_2026.pdf}
       - name: Reliable pipelines
-        what: Long-running jobs that checkpoint their progress, reconnect after network errors and resume automatically, as required for an eight to eleven hour catalogue scan.
+        what: "Long-running jobs that checkpoint their progress, reconnect after network errors and resume automatically, as required for an eight to eleven hour catalogue scan."
         used:
           - {label: Mapping the Biomass catalogue, link: /projects.html#mapping-everywhere-biomass-has-looked}
       - name: Signal and data analysis
-        what: FFT cross-spectra for wave direction and wavelength, Gaussian peak fitting, energy calibration and efficiency measurements.
+        what: "FFT cross-spectra for wave direction and wavelength, Gaussian peak fitting, energy calibration and efficiency measurements."
         used:
           - {label: Pacific ocean front, link: /projects.html#an-ocean-front-in-the-pacific}
           - {label: Gamma-ray detectors, link: /projects.html#comparing-gamma-ray-detectors}
       - name: Orbit modelling
-        what: Python simulations of planetary orbits and transfer windows from NASA JPL data, and orbit set-up in GMAT.
+        what: "Python simulations of planetary orbits and transfer windows from NASA JPL data, and orbit set-up in GMAT."
         used:
           - {label: Launch windows to Jupiter, link: /projects.html#launch-windows-to-jupiter-and-beyond}
       - name: Embedded code
-        what: MicroPython on a Raspberry Pi Pico for sensor logging and telemetry on a balloon payload.
+        what: "MicroPython on a Raspberry Pi Pico for sensor logging and telemetry on a balloon payload."
         used:
           - {label: SQRT balloon, link: /projects.html#sqrt-high-altitude-balloon}
       - name: Careful use of AI tools
-        what: Used ESA's LUNA assistant and Microsoft Copilot for troubleshooting and code tidying, while developing the physics and analysis myself, and disclosed this use in my reports.
+        what: "Used ESA's LUNA assistant and Microsoft Copilot for troubleshooting and code tidying, while developing the physics and analysis myself, and disclosed this use in my reports."
         used:
           - {label: Internship report, link: /files/Doyle_ESA_Biomass_Internship_Report_2026.pdf}
       - name: Version control and documents
-        what: Git and GitHub, LaTeX on Overleaf for reports with code appendices, and clear notebook documentation.
+        what: "Git and GitHub, LaTeX on Overleaf for reports with code appendices, and clear notebook documentation."
         used:
           - {label: Internship report, link: /files/Doyle_ESA_Biomass_Internship_Report_2026.pdf}
 
   - title: Space systems and operations
     skills:
       - name: Spacecraft operations
-        what: Pass planning, real-time commanding through mission control software, Grafana telemetry monitoring, data downlink and recovery from safe mode.
+        what: "Pass planning, real-time commanding through mission control software, Grafana telemetry monitoring, data downlink and recovery from safe mode."
         used:
           - {label: EIRSAT-1 mission test, link: /projects.html#eirsat-1-mission-test}
       - name: Mission and instrument design
-        what: Turning a science goal into requirements, then designing the instrument and spacecraft to meet them.
+        what: "Turning a science goal into requirements, then designing the instrument and spacecraft to meet them."
         used:
           - {label: TiNi mission concept, link: /projects.html#tini-a-gamma-ray-mission-concept}
       - name: Systems engineering
-        what: Writing and reviewing project documents through preliminary design, critical design and flight acceptance reviews, including verification and test plans.
+        what: "Writing and reviewing project documents through preliminary design, critical design and flight acceptance reviews, including verification and test plans."
         used:
           - {label: SQRT balloon, link: /projects.html#sqrt-high-altitude-balloon}
       - name: Payload build, flight and recovery
-        what: Integration, launch day operations, live tracking, recovery and post-flight analysis of a stratospheric payload.
+        what: "Integration, launch day operations, live tracking, recovery and post-flight analysis of a stratospheric payload."
         used:
           - {label: SQRT balloon, link: /projects.html#sqrt-high-altitude-balloon}
       - name: Radiation detectors
-        what: Testing CdTe, NaI(Tl) and BGO gamma-ray detectors with radioactive sources, and judging which suits which space instrument.
+        what: "Testing CdTe, NaI(Tl) and BGO gamma-ray detectors with radioactive sources, and judging which suits which space instrument."
         used:
           - {label: Gamma-ray detectors, link: /projects.html#comparing-gamma-ray-detectors}
       - name: Planetary and astrophysics background
-        what: Comparative planetary hydrology of Titan and Earth using Cassini-Huygens data, and the gamma-ray signatures of Type Ia supernovae.
+        what: "Comparative planetary hydrology of Titan and Earth using Cassini-Huygens data, and the gamma-ray signatures of Type Ia supernovae."
         used:
           - {label: Titan and Earth, link: /projects.html#titan-and-earth-rivers-and-lakes}
           - {label: TiNi mission concept, link: /projects.html#tini-a-gamma-ray-mission-concept}
       - name: CAD
-        what: Contributed to the design of a valve mechanism for a satellite payload.
+        what: "Contributed to the design of a valve mechanism for a satellite payload."
         used:
           - {label: YPSat-2 valve, link: /projects.html#ypsat-2-valve-mechanism}
 
   - title: Working with people
     skills:
       - name: Project management
-        what: Led a five-person team through planning, design reviews, build and flight, managing the schedule and project documentation.
+        what: "Led a five-person team through planning, design reviews, build and flight, managing the schedule and project documentation."
         used:
           - {label: SQRT balloon, link: /projects.html#sqrt-high-altitude-balloon}
       - name: Technical writing
-        what: Long technical reports, design documents, an A0 conference-style poster and slide decks.
+        what: "Long technical reports, design documents, an A0 conference-style poster and slide decks."
         used:
           - {label: Projects, link: /projects.html}
       - name: Presenting
-        what: An A0 research poster at the UCD poster session, our team's flight acceptance review, a remote sensing presentation on the Blessington Lakes, and talks to school groups.
+        what: "An A0 research poster at the UCD poster session, our team's flight acceptance review, a remote sensing presentation on the Blessington Lakes, and talks to school groups."
         used:
           - {label: Poster, link: /files/Doyle_Biomass_Internship_Poster_2026.pdf}
           - {label: SQRT review slides, link: /files/sqrt/SQRT_Flight_Acceptance_Review_Slides.pdf}
       - name: Working in an international team
-        what: Six months in ESA's Earth Observation department at ESTEC, including weekly Biomass training from DLR, alongside a cross-team young professionals payload project.
+        what: "Six months in ESA's Earth Observation department at ESTEC, including weekly Biomass training from DLR, alongside a cross-team young professionals payload project."
         used:
           - {label: Experience, link: /experience.html}
       - name: Teaching and outreach
-        what: Running my own physics and mathematics tutoring practice since 2024, ESA school visits and technical support at CanSat.
+        what: "Running my own physics and mathematics tutoring practice since 2024, ESA school visits and technical support at CanSat."
         used:
           - {label: Volunteering, link: /volunteering.html}
           - {label: Experience, link: /experience.html}
       - name: Languages
-        what: English and Irish.
+        what: "English and Irish."
         used: []
