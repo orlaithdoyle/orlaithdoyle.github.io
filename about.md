@@ -16,7 +16,7 @@ I like work where science and engineering meet, and I like explaining things. I'
 
 ## Outside work
 
-From 2016 to 2019 I coached at Blessington GAA, first with the children in the club academy and then goalkeeper training for the under-12 girls. I also tutor Irish.
+From 2016 to 2019 I coached at Blessington GAA, first with the children in the club academy and then goalkeeper training for the under-12 girls. I went to an all-Irish secondary school, Coláiste Íosagáin, and I also tutor Irish.
 
 *Is féidir liom obair trí Ghaeilge freisin.* (I can work through Irish too.)
 

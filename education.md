@@ -20,4 +20,9 @@ Second Class Honours, Grade 1. Final year thesis on modelling orbits and launch 
 ![Graduating from DCU with classmates](photos/dcu-graduation.jpg)
 *Graduation day at DCU, featured in the Irish Independent. Photo: Kyran O'Brien, DCU Communications Office.*
 
+### Leaving Certificate
+*Coláiste Íosagáin, graduated 2019*
+
+Over 500 CAO points. Coláiste Íosagáin is an all-Irish secondary school, so I studied all my subjects through Irish.
+
 A full list of my modules, and what each covered, is on my [transcript page](transcript.html), and my licences and certificates are on the [certificates page](certificates.html).
