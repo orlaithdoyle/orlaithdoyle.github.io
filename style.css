@@ -252,3 +252,6 @@ main p.glance{display:block}
 .topics{font-size:.98rem;color:var(--faded)}
 main h2[id]{scroll-margin-top:1rem}
 .panel + h2{margin-top:3.6rem}
+
+.affil{font-size:.95rem;letter-spacing:.03em;color:var(--faded);border-top:1px solid var(--lines);border-bottom:1px solid var(--lines);padding:.7rem 0;margin:1.6rem 0 .4rem;text-align:center}
+main img{max-height:30rem;width:auto;max-width:100%}

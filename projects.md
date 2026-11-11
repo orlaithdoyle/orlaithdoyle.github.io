@@ -57,6 +57,9 @@ An analysis of the HH-VV phase difference off the mouth of the Amazon, examining
 
 The Blessington Lakes supply over half of Dublin's drinking water. I used SWOT to track the reservoir's water level over the year, compared it with local rainfall and gauge records, and used Sentinel-2 to assess algal activity during low-water periods.
 
+![Vegetation index map of the Blessington reservoir from Sentinel-2](photos/blessington-water.jpg)
+*Sentinel-2 vegetation index around the reservoir, August 2025.*
+
 **Tools:** SWOT, Sentinel-2, Python, GIS
 
 **Read more:** [Report (PDF, 1 MB)](files/Doyle_Blessington_Lakes_SWOT_Sentinel_Report_2026.pdf)&nbsp;&nbsp;|&nbsp;&nbsp;[Presentation slides (PDF, 3 MB)](files/Doyle_Blessington_Lakes_Slides_2026.pdf)
@@ -105,6 +108,9 @@ As part of the BETA crew, I carried out a mission test on the EIRSAT-1 FlatSat, 
 
 A mission concept to measure radioactive nickel and titanium produced in Type Ia supernovae. Two spacecraft fly in formation: one carries a Laue lens that focuses gamma rays onto a cooled germanium detector on the other. The report covers the science case, requirements, instrument design and spacecraft design.
 
+![3D model of the TiNi detector spacecraft with sunshield](photos/tini-spacecraft.jpg)
+*The detector spacecraft design, with its germanium detector, cryocooler and sunshield.*
+
 **Read more:** [Mission design report (PDF, 0.7 MB)](files/Doyle_TiNi_Gamma-Ray_Mission_Design_2026.pdf)
 
 ### YPSat-2 valve mechanism
@@ -119,6 +125,9 @@ Science justification and CAD design for a venous valve mechanism on ESA's young
 
 A group laboratory study comparing CdTe, NaI(Tl) and BGO detectors using radioactive sources. We fitted photopeaks to calibrate each detector, measured energy resolution and efficiency, characterised the off-axis response, and assessed the suitability of each detector for different space instruments.
 
+![Gamma-ray spectrum of a cobalt source against background](photos/detector-spectrum.jpg)
+*Cobalt source spectrum plotted against the background measurement.*
+
 **Tools:** Python, curve fitting, MAESTRO
 
 **Read more:** [Lab report (PDF, 1.2 MB)](files/Doyle_Gamma-Ray_Detector_Comparison_2026.pdf)
@@ -128,6 +137,9 @@ A group laboratory study comparing CdTe, NaI(Tl) and BGO detectors using radioac
 
 Final year project: modelling planetary orbits in Python using NASA JPL ephemerides, and identifying optimal launch windows for transfer orbits from Earth to Jupiter and the outer planets.
 
+![Plot of Earth and Jupiter orbits with the Earth-Jupiter distance at a launch date](photos/jupiter-transfer.jpg)
+*Earth and Jupiter positions from my orbit model, with their separation at a candidate launch date.*
+
 **Tools:** Python, NASA JPL ephemerides, orbital mechanics
 
 **Read more:** [Thesis (PDF, 1.5 MB)](files/Doyle_BSc_Thesis_Jupiter_Launch_Windows_2023.pdf)
@@ -136,6 +148,9 @@ Final year project: modelling planetary orbits in Python using NASA JPL ephemeri
 *Planetary Geomorphology module, UCD, 2026*
 
 An essay comparing the rivers, lakes and deltas of Saturn's moon Titan with those on Earth, drawing on Cassini-Huygens data. The landforms are strikingly similar, despite being shaped by liquid methane over water ice, under very different gravity and temperature.
+
+![Huygens probe descent images of Titan's surface](photos/titan-huygens.jpg)
+*Views of Titan's surface taken by the Huygens probe during its descent. Image: ESA/NASA/JPL/University of Arizona.*
 
 **Read more:** [Essay (PDF, 0.7 MB)](files/Doyle_Titan_vs_Earth_Hydrology_2026.pdf)
 

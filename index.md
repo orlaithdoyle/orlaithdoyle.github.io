@@ -11,7 +11,9 @@ I hold an MSc in Space Science and Technology from University College Dublin (Fi
 
 {% assign cv_file = site.static_files | where: "path", "/cv.pdf" | first %}I am seeking roles in Earth observation, remote sensing and the wider space sector, in Ireland or elsewhere in Europe. I can be reached [by email](mailto:orlaithbdoyle@gmail.com).{% if cv_file %} My [CV is available here](cv.pdf).{% endif %}
 
-For recruiters, the [FAQ page](faq.html) covers availability, location and right to work.
+For recruiters, a [one-page profile (PDF)](files/Orlaith_Doyle_Profile.pdf) summarises my background, and the [FAQ page](faq.html) covers availability, location and right to work.
+
+<p class="affil">ESA ESTEC &nbsp;&nbsp;/&nbsp;&nbsp; University College Dublin &nbsp;&nbsp;/&nbsp;&nbsp; Dublin City University &nbsp;&nbsp;/&nbsp;&nbsp; EIRSAT-1</p>
 
 ## Selected work
 
@@ -28,6 +30,9 @@ For recruiters, the [FAQ page](faq.html) covers availability, location and right
 : Project manager for a five-person team, from design reviews through to a stratospheric flight.
 
 [See all projects](projects.html)
+
+![World map of every Biomass swath, coloured by ocean, coast and land](photos/biomass-swath-map.jpg)
+*Every location imaged by Biomass during my internship, classified as ocean (blue), coastal (red) or land (green). From [Mapping everywhere Biomass has looked](projects.html#mapping-everywhere-biomass-has-looked).*
 
 ## Recently
 
