@@ -44,7 +44,21 @@
   <p class="irish">{{ site.irish_name }}</p>
   {% if site.tagline != "" %}<p class="tagline">{{ site.tagline }}</p>{% endif %}
   <p class="status">{{ site.status }}</p>
-  <nav aria-label="Main">{% for item in site.menu %}<a href="{{ item.link | relative_url }}"{% if page.url == item.link %} aria-current="page"{% endif %}>{{ item.label }}</a> {% endfor %}</nav>
+  <nav aria-label="Main">
+    {%- for item in site.menu -%}
+      {%- if item.children -%}
+        {%- assign open = false -%}
+        {%- if page.url == item.link -%}{%- assign open = true -%}{%- endif -%}
+        {%- for c in item.children -%}{%- if page.url == c.link -%}{%- assign open = true -%}{%- endif -%}{%- endfor -%}
+        <details class="navgroup"{% if open %} open{% endif %}>
+          <summary><a href="{{ item.link | relative_url }}"{% if page.url == item.link %} aria-current="page"{% endif %}>{{ item.label }}</a><span class="caret" aria-hidden="true"></span></summary>
+          <div class="sub">{%- for c in item.children -%}<a href="{{ c.link | relative_url }}"{% if page.url == c.link %} aria-current="page"{% endif %}>{{ c.label }}</a>{%- endfor -%}</div>
+        </details>
+      {%- else -%}
+        <a href="{{ item.link | relative_url }}"{% if page.url == item.link %} aria-current="page"{% endif %}>{{ item.label }}</a>
+      {%- endif -%}
+    {%- endfor -%}
+  </nav>
   <div class="contact">
     <a href="mailto:{{ site.email }}">Email</a>
     <a href="{{ site.linkedin }}">LinkedIn</a>

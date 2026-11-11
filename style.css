@@ -208,3 +208,21 @@ main td{border-bottom:1px solid var(--lines);padding:.38rem .6rem .38rem 0;color
 main td:nth-child(1){color:var(--faded);white-space:nowrap;width:6.5rem}
 main td:nth-child(3),main td:nth-child(4),main th:nth-child(3),main th:nth-child(4){text-align:right;white-space:nowrap;width:5rem}
 @media (max-width:600px){main td:nth-child(1),main th:nth-child(1){display:none}}
+
+/* Dropdown group in the menu (Education > Transcript, Certificates) */
+.navgroup{display:block}
+.navgroup summary{list-style:none;display:flex;align-items:center;cursor:pointer}
+.navgroup summary::-webkit-details-marker{display:none}
+.navgroup summary a{flex:none}
+.navgroup .caret{width:.45rem;height:.45rem;border-right:1.5px solid var(--faded);border-bottom:1.5px solid var(--faded);transform:rotate(45deg);margin:-.25rem 0 0 .7rem;transition:transform .15s}
+.navgroup[open] .caret{transform:rotate(225deg);margin-top:.2rem}
+.navgroup summary:hover .caret{border-color:var(--text)}
+.navgroup .sub{display:flex;flex-direction:column;margin:.1rem 0 .3rem}
+.navgroup .sub a{font-size:.92rem;padding-left:1.8rem}
+@media (max-width:860px){
+  .navgroup{display:inline-block;position:relative}
+  .navgroup .sub{position:absolute;top:100%;left:-.6rem;z-index:20;min-width:10rem;margin:.3rem 0 0;padding:.4rem .6rem;
+    background:var(--background);border:1px solid var(--lines);border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+  .navgroup .sub a{padding:.3rem 0;border:0}
+}
+@media (prefers-reduced-motion:reduce){.navgroup .caret{transition:none}}

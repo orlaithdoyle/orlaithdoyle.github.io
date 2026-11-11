@@ -1,3 +1,13 @@
+/* 0. On phones the Education dropdown starts closed, and closes when you tap elsewhere */
+(function () {
+  if (!window.matchMedia('(max-width:860px)').matches) return;
+  var groups = document.querySelectorAll('.navgroup');
+  groups.forEach(function (g) { g.removeAttribute('open'); });
+  document.addEventListener('click', function (e) {
+    groups.forEach(function (g) { if (!g.contains(e.target)) g.removeAttribute('open'); });
+  });
+})();
+
 /* 1. Put each project / job / course (everything from one ### heading
       to the next) in its own glass panel. The pages stay plain Markdown. */
 (function () {

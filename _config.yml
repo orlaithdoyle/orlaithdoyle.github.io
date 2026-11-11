@@ -20,6 +20,7 @@ orb: true
 
 # The menu at the top of every page, in order.
 # To hide a page from the menu, delete its two lines.
+# Items under "children" appear in a small dropdown under that menu item.
 menu:
   - label: Home
     link: /
@@ -31,6 +32,11 @@ menu:
     link: /experience.html
   - label: Education
     link: /education.html
+    children:
+      - label: Transcript
+        link: /transcript.html
+      - label: Certificates
+        link: /certificates.html
   - label: Volunteering
     link: /volunteering.html
   - label: Achievements
