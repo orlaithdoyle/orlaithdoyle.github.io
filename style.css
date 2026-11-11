@@ -23,7 +23,7 @@ a:hover{color:var(--text)}
 a:focus-visible{outline:2px solid var(--links);outline-offset:3px;border-radius:2px}
 
 /* Two-column shell: fixed sidebar + reading column */
-.shell{display:grid;grid-template-columns:17rem minmax(0,1fr);min-height:100vh;max-width:66rem;margin:0 auto}
+.shell{display:grid;grid-template-columns:18.5rem minmax(0,1fr);min-height:100vh;max-width:66rem;margin:0 auto}
 .side{position:sticky;top:0;height:100vh;padding:3.2rem 2rem 2rem 2.2rem;border-right:1px solid var(--lines);
   display:flex;flex-direction:column;overflow-y:auto}
 main{padding:3.4rem 3.5rem 3rem 4rem;max-width:46rem}
@@ -280,3 +280,7 @@ main dl.skill-entries dt:first-child{margin-top:.6rem}
 main dl.skill-entries dd{margin:0;padding-left:0;border-left:0;color:var(--text);font-size:.98rem;line-height:1.6;max-width:none}
 .skill-ref{color:var(--faded);font-size:.92rem}
 @media (max-width:600px){table.skills-summary th{width:auto;border-bottom:0;padding-bottom:0}}
+
+/* Keep the availability line on one line and give it more weight */
+.status-cta{padding:.75rem .85rem}
+.status-cta .status{white-space:nowrap;font-size:.9rem;font-weight:500;color:#fff;gap:.45rem}
