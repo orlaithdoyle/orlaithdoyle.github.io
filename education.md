@@ -15,7 +15,7 @@ Thesis on sea surface salinity from Biomass P-band SAR, done at ESA ESTEC: [read
 ### BSc Physics with Astronomy
 *Dublin City University, 2019 to 2023*
 
-Second Class Honours, Grade 1. Final year thesis on modelling orbits and launch windows to reach Jupiter and beyond: [read the thesis (PDF)](files/Doyle_BSc_Thesis_Jupiter_Launch_Windows_2023.pdf).
+Second Class Honours, Grade 1. Final year thesis (81%, a first-class mark) on modelling orbits and launch windows to reach Jupiter and beyond: [read the thesis (PDF)](files/Doyle_BSc_Thesis_Jupiter_Launch_Windows_2023.pdf).
 
 ![Graduating from DCU with classmates](photos/dcu-graduation.jpg)
 *Graduation day at DCU, featured in the Irish Independent. Photo: Kyran O'Brien, DCU Communications Office.*
