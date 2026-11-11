@@ -8,7 +8,7 @@
 
 groups:
   - title: Earth observation and remote sensing
-    tools: ["SAR and polarimetry", "InSAR", "Sentinel-1, -2, -3", "SWOT", "SMOS and SMAP", "GLORYS12, ERA5, OSTIA", "ESA MAAP and STAC", "Copernicus Marine", "QGIS"]
+    tools: ["SAR and polarimetry", "InSAR", "SNAP", "Sentinel-1, -2, -3", "SWOT", "SMOS and SMAP", "GLORYS12, ERA5, OSTIA", "ESA MAAP and STAC", "Copernicus Marine", "QGIS", "ArcGIS"]
     skills:
       - name: SAR processing
         what: "Six months of work with Biomass P-band Level 1 products: reading GeoTIFF and annotation files, calibration checks, multilooking, speckle reduction and land masking across differing acquisition geometries."
@@ -55,7 +55,7 @@ groups:
         used:
           - {label: Experience, link: /experience.html}
   - title: Programming and data
-    tools: ["Python", "NumPy and xarray", "SciPy", "Matplotlib and Plotly", "Cartopy", "Jupyter", "Git and GitHub", "LaTeX", "MicroPython"]
+    tools: ["Python", "NumPy, pandas and xarray", "SciPy", "Astropy", "Matplotlib and Plotly", "Cartopy", "MATLAB", "Jupyter", "Git and GitHub", "LaTeX", "MicroPython", "basic machine learning"]
     skills:
       - name: Python for science
         what: "NumPy, xarray, SciPy, tifffile and lxml, in Jupyter notebooks structured so that a new scene can be processed by editing a single configuration cell."
@@ -92,7 +92,7 @@ groups:
           - {label: Internship report, link: /files/Doyle_ESA_Biomass_Internship_Report_2026.pdf}
 
   - title: Space systems and operations
-    tools: ["Mission control software", "Grafana", "GMAT", "ECSS design reviews", "Raspberry Pi Pico", "CAD", "Gamma-ray detectors"]
+    tools: ["Mission control software", "Grafana", "GMAT", "ECSS design reviews", "Raspberry Pi Pico", "electronics", "CAD and 3D printing", "Gamma-ray detectors", "spectroscopy"]
     skills:
       - name: Spacecraft operations
         what: "Pass planning, real-time commanding through mission control software, Grafana telemetry monitoring, data downlink and recovery from safe mode."
@@ -125,7 +125,7 @@ groups:
           - {label: YPSat-2 valve, link: /projects.html#ypsat-2-valve-mechanism}
 
   - title: Working with people
-    tools: ["Project management", "Technical writing", "Presenting", "Teaching", "English and Irish"]
+    tools: ["Project management", "Technical writing", "Presenting", "Teaching", "English (C2)", "Irish (C2)", "French (B1)", "Dutch (A1)"]
     skills:
       - name: Project management
         what: "Led a five-person team through planning, design reviews, build and flight, managing the schedule and project documentation."
@@ -145,10 +145,10 @@ groups:
         used:
           - {label: Experience, link: /experience.html}
       - name: Teaching and outreach
-        what: "Running my own physics and mathematics tutoring practice since 2024, ESA school visits and technical support at CanSat."
+        what: "Running my own physics and mathematics tutoring practice in 2024, laboratory support at DCU, ESA school visits and technical support at CanSat."
         used:
           - {label: Volunteering, link: /volunteering.html}
           - {label: Experience, link: /experience.html}
       - name: Languages
-        what: "English and Irish."
+        what: "English and Irish (both C2), French (B1) and basic Dutch (A1)."
         used: []

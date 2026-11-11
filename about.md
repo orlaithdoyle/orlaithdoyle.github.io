@@ -18,7 +18,7 @@ I am most comfortable where science and engineering meet, and I enjoy explaining
 
 ## Outside work
 
-I was educated through Irish at Coláiste Íosagáin and continue to tutor the language. From 2016 to 2019 I coached at Blessington GAA, first with the club academy and later as goalkeeping coach for the under-12 girls.
+I was educated through Irish at Coláiste Íosagáin. Outside work I enjoy astrophotography, drone photography, 3D printing, scuba diving, sailing and hiking. From 2016 to 2019 I coached at Blessington GAA, first with the club academy and later as goalkeeping coach for the under-12 girls.
 
 *Is féidir liom obair trí Ghaeilge freisin.* (I am also able to work through Irish.)
 

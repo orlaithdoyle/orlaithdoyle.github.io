@@ -24,6 +24,17 @@ A week of visits to Irish schools on behalf of ESA, speaking about space science
 
 Ran weekly sessions with young children in the club academy, and later coached goalkeeping for the under-12 girls' team.
 
+### Class Representative
+*MSc Space Science and Technology, UCD, 2025 to 2026; BSc Physics with Astronomy, DCU, 2020 to 2023*
+
+Represented my class to academic staff in both degrees.
+
+### Treasurer, Amnesty International Society
+*Dublin City University, 2019 to 2021*
+
+### Carer and Walker, DSPCA
+*Animal shelter, 2017 to 2018*
+
 ### Volunteer, Astronomy Ireland
 *2016 to 2018*
 

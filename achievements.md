@@ -8,7 +8,11 @@ title: Achievements
 - Selected for a six-month ESA ESTEC internship on the Biomass mission, 2026
 - MSc Space Science and Technology, University College Dublin, First Class Honours, 2026
 - Project manager, SQRT stratospheric balloon mission, 2025 to 2026
-- BSc Physics with Astronomy, Dublin City University, Second Class Honours, Grade 1, 2023
+- BSc Physics with Astronomy, Dublin City University, Second Class Honours, Grade 1, 2023; third in my class overall
+- High distinction for my undergraduate thesis
+- Scholarship award for Leaving Certificate results, 2019
+- Full attendance award, six consecutive years at Coláiste Íosagáin
+- All-Ireland Football winner (GAA), 2015
 - EU drone operator and remote pilot (A1/A3); full driving licence
 
 ## Presentations and outreach

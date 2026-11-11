@@ -112,6 +112,13 @@ The Blessington Lakes supply over half of Dublin's drinking water. I used SWOT t
 
 **Read more:** [Report (PDF, 1 MB)](files/Doyle_Blessington_Lakes_SWOT_Sentinel_Report_2026.pdf)&nbsp;&nbsp;|&nbsp;&nbsp;[Presentation slides (PDF, 3 MB)](files/Doyle_Blessington_Lakes_Slides_2026.pdf)
 
+### Monitoring volcanic activity at Long Valley Caldera
+*Applied Geophysics, UCD, 2026*
+
+Analysed continuous GPS time series from several USGS stations at Long Valley Caldera, California, spanning around three decades, to identify ground deformation linked to magma inflation and deflation, and compared the deformation with the seismic catalogue.
+
+**Tools:** Python, USGS GPS and earthquake data
+
 ### Other coursework
 *UCD, 2025 to 2026*
 
@@ -160,6 +167,11 @@ A mission concept to measure radioactive nickel and titanium produced in Type Ia
 *The detector spacecraft design, with its germanium detector, cryocooler and sunshield.*
 
 **Read more:** [Mission design report (PDF, 0.7 MB)](files/Doyle_TiNi_Gamma-Ray_Mission_Design_2026.pdf)
+
+### Responding to an ESA-style tender
+*Space Sector Professional Skills, UCD, 2026*
+
+A technical proposal in response to an example ESA Invitation to Tender for a planetary sample return container recovery mechanism. I analysed the mission and system requirements, flagged ambiguities that would affect verification, carried out high-level trade-offs between sensing, autonomy and capture concepts, and documented the design rationale, risks and validation approach in line with ECSS principles.
 
 ### YPSat-2 valve mechanism
 *ESA ESTEC, 2026*

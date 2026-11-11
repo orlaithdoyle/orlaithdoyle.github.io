@@ -21,12 +21,17 @@ Six-month placement in the Climate Action and Earth Observation Missions Departm
 
 I am grateful to my supervisor, Bjorn Rommen, for his guidance and support, and to Thibault Taillade, Paco López-Dekker and Yan Yuan, whose input shaped this work.
 
-### Founder and Tutor, Grade+
-*Private tutoring practice. February 2024 to present*
+### Founder, Tutor and Website Developer, Grade+
+*Private tutoring practice. February 2024 to October 2024*
 
-Tutoring in physics and mathematics from late primary level through to undergraduate level, as well as Irish.
+Founded and ran a one-to-one tutoring service in physics and mathematics at secondary and undergraduate level. I prepared learning materials for different levels of background, gave written feedback on progress, and built and maintained the website used to share resources with students.
 
-### Laboratory Technician and Tutor
-*School of Physics, Dublin City University. During my undergraduate degree*
+### Laboratory Technician
+*School of Physics, Dublin City University. August 2023 to April 2024*
 
-Supported the running of undergraduate physics laboratories and tutorials.
+Supported the optical and physics teaching laboratories: setting up experiments, checking data, and maintaining clear documentation of procedures and results. I also helped students and staff with experimental methods and instrumentation.
+
+### Supervisory roles, retail and hospitality
+*Dunnes Stores and Kippure Estate, Blessington, Co. Wicklow. May 2017 to January 2024*
+
+Coordinated daily operations, allocated tasks and organised staff schedules in busy environments, alongside my studies.
