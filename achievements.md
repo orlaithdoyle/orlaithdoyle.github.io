@@ -13,7 +13,7 @@ title: Achievements
 
 ## Presentations and outreach
 
-- Poster presentation of my Biomass internship work, UCD School of Physics poster session, August 2026
+- Poster presentation of my Biomass internship work, UCD School of Physics poster session, August 2026 ([poster, PDF](files/Doyle_Biomass_Internship_Poster_2026.pdf))
 - Technical expert for school teams at ESA's CanSat event, ESTEC, 2026
 - A week of school visits across Ireland for ESA, talking about space and space careers, 2026
 - Public stargazing nights with Astronomy Ireland, 2016 to 2018

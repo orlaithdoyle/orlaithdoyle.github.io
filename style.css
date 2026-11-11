@@ -178,7 +178,7 @@ main > p:first-of-type{font-size:1.32rem;line-height:1.55;color:#fff}
 strong{color:#fff}
 body{color:#f1edfb}
 /* "Tools:" lines inside projects: label sits right next to the list */
-.panel p:has(> strong:first-child){grid-template-columns:auto minmax(0,1fr);column-gap:.6rem;font-size:1rem;color:var(--faded)}
+.panel p:has(> strong:first-child){display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .6rem;font-size:1rem;color:var(--faded)}
 
 /* Selected work list on the home page */
 main dl{margin:.6rem 0 1.2rem}

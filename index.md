@@ -21,8 +21,8 @@ If you're hiring, my [quick answers page](faq.html) covers availability, locatio
 [Mapping everywhere Biomass has looked](projects.html#mapping-everywhere-biomass-has-looked)
 : Over 220,000 Biomass products reduced to about 5,000 unique places, each sorted into ocean, coast or land.
 
-[EIRSAT-1 spacecraft operations](projects.html#eirsat-1-spacecraft-operations)
-: Working passes from the ground station for Ireland's first satellite.
+[EIRSAT-1 mission test](projects.html#eirsat-1-mission-test)
+: Five live radio passes on the EIRSAT-1 FlatSat, including a recovery from safe mode.
 
 [SQRT high-altitude balloon](projects.html#sqrt-high-altitude-balloon)
 : Led a five-person team from design to a flight in the stratosphere.
