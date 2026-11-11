@@ -5,6 +5,8 @@ title: About
 
 # About me
 
+I grew up in the mountains, surrounded by forest and nature. That love of both space and trees is what drew me to the Biomass mission.
+
 My interest in space began as a teenager volunteering with Astronomy Ireland, where I helped run telescopes at public observing nights. That interest led to a BSc in Physics with Astronomy at Dublin City University and an MSc in Space Science and Technology at University College Dublin.
 
 ![Orlaith in a space station module mockup, wearing an ESA top and lanyard](photos/esa-module.jpg)

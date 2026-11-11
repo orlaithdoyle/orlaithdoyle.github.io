@@ -14,10 +14,12 @@ Six-month placement in the Climate Action and Earth Observation Missions Departm
 - Built a resumable scanner that catalogued every location imaged by Biomass
 - Identified a band-ordering mismatch in one product format that was corrupting polarisation data
 - Prepared calibration and validation site files for my supervisor's team
-- Contributed science justification and CAD work to the YPSat-2 young professionals payload
+- Led the research design of a bicuspid vein valve for the YPSat-2 young professionals payload, and contributed CAD work
 
 ![Orlaith in an ESA t-shirt standing among large model rockets](photos/esa-launchers.jpg)
 *With the model launchers during my ESA internship, 2026.*
+
+I am grateful to my supervisor, Bjorn Rommen, for his guidance and support, and to Thibault Taillade, Paco López-Dekker and Yan Yuan, whose input shaped this work.
 
 ### Founder and Tutor, Grade+
 *Private tutoring practice. February 2024 to present*

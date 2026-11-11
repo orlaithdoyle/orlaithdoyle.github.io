@@ -15,6 +15,11 @@ Registered drone operator, certified to fly in the A1 and A3 open subcategories.
 ### Full driving licence
 *Ireland*
 
+### Remote Sensing Course
+*GeoUniversity*
+
+Independent training in Earth observation and remote sensing, taken alongside my MSc.
+
 <!--
 To add a certificate, copy the four lines below, remove the arrows, and fill them in.
 If you have a PDF or image of it, upload it to the files folder and link it on the "Certificate" line.

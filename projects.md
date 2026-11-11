@@ -18,6 +18,8 @@ Biomass is ESA's first P-band SAR mission. I developed a pipeline that takes its
 
 In the course of this work I identified that one product format stored its image bands in the reverse order to its own metadata, which had been silently swapping the HH and VV channels.
 
+The main conclusions were that both amplitude and phase respond to salinity as theory predicts, but that surface roughness from wind, swell, fronts and slicks changes the signal more than salinity does. Biomass can itself detect much of that roughness through wave spectra, coherence and H/α decomposition, so the data could help correct for it. Promising targets for further work include small rivers with sharp salinity contrasts, such as the Moulouya (Morocco), Magdalena (Colombia) and Rioni (Georgia) plumes.
+
 ![HH-VV phase from Biomass beside SMOS salinity for the same swath at the Amazon mouth](photos/biomass-amazon-salinity.jpg)
 *Biomass HH-VV phase (left) against SMOS salinity along the same swath (middle) and the wider salinity field (right), Amazon mouth, July 2026.*
 
@@ -44,6 +46,23 @@ One region of an equatorial Pacific scene stood out in the radar coherence and p
 *Biomass coverage over the 2026 El Niño warm tongue, on a sea surface temperature anomaly map.*
 
 **Tools:** Python, FFT cross-spectra, H/α polarimetric decomposition, GLORYS12, OSTIA
+
+### What else Biomass sees on the ocean
+*ESA ESTEC, 2026*
+
+While searching for salinity signals, I catalogued the other ocean features that appear in Biomass P-band imagery, since each one changes surface roughness and can mask or mimic a salinity signal:
+
+- **Ocean fronts:** long, thin, often curving lines where water masses of different temperature or salinity meet
+- **Rain cells:** dark patches where heavy rain damps the surface waves
+- **Cold pools:** rain-cooled air spreading out beneath storms, with a calm upwind side and a rough gust front downwind
+- **Surface slicks:** dark streaks where natural or oil films smooth the small ripples the radar responds to
+
+Flagging these features before retrieval is one of the main recommendations from my internship.
+
+### Ship detection
+*ESA ESTEC, 2026*
+
+A short side project on spotting ships in Biomass ocean scenes.
 
 ### HH-VV phase over the Amazon plume
 *ESA ESTEC, 2026*
@@ -116,7 +135,7 @@ A mission concept to measure radioactive nickel and titanium produced in Type Ia
 ### YPSat-2 valve mechanism
 *ESA ESTEC, 2026*
 
-Science justification and CAD design for a venous valve mechanism on ESA's young professionals satellite payload.
+Research lead for the design on the science team of ESA's young professionals satellite payload: a bicuspid vein valve that opens with forward flow and closes against reflux. I also contributed to the CAD design.
 
 ## Physics, astronomy and planetary science
 

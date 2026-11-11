@@ -116,7 +116,7 @@ groups:
           - {label: Titan and Earth, link: /projects.html#titan-and-earth-rivers-and-lakes}
           - {label: TiNi mission concept, link: /projects.html#tini-a-gamma-ray-mission-concept}
       - name: CAD
-        what: "Contributed to the design of a valve mechanism for a satellite payload."
+        what: "CAD contributions to a valve mechanism for a satellite payload, for which I led the research design."
         used:
           - {label: YPSat-2 valve, link: /projects.html#ypsat-2-valve-mechanism}
 
