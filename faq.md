@@ -3,42 +3,42 @@ description: "Quick answers for recruiters: availability, location, right to wor
 title: FAQ
 ---
 
-# Quick answers
+# FAQ
 
-A few things people usually want to know before getting in touch.
+Answers to the questions recruiters most often ask.
 
-### What kind of roles are you looking for?
+### What roles are you looking for?
 
-Roles in Earth observation, remote sensing and geospatial analysis, or the wider space sector. Most of all I'm looking for somewhere I can keep learning and grow into the job.
+Roles in Earth observation, remote sensing, geospatial analysis or the wider space sector. Above all, I am looking for a position where I can continue to develop and take on more responsibility over time.
 
-### Where can you work?
+### Where are you able to work?
 
-I'm open to any location for the right role, including moving abroad. Remote and hybrid are fine too.
+I am open to any location for the right role, including relocation abroad. Remote and hybrid arrangements also suit me.
 
 ### When can you start?
 
-Straight away.
+Immediately.
 
-### Do you need a visa?
+### Do you require a visa?
 
-No. I'm an Irish citizen, so I can work anywhere in the EU, and in the UK as well.
+No. I am an Irish citizen, with the right to work throughout the EU and in the UK.
 
 ### Why radar?
 
-Radar satellites see through cloud and work at night, so they keep watching when optical satellites can't. There's also still a lot to work out about what radar can measure, which is what I enjoy about it.
+Radar satellites observe through cloud and at night, so they provide data when optical sensors cannot. There is also a great deal still to learn about what radar can measure, which is what draws me to the field.
 
-### What is Biomass, in plain words?
+### What is Biomass?
 
-Biomass is an ESA satellite launched in 2025. It carries a P-band radar, which uses much longer radio waves than other radar satellites. That lets it see down through forest canopies to measure how much wood is in the world's forests, which matters for tracking carbon. During my internship I tested whether the same data could tell us how salty the sea surface is.
+Biomass is an ESA Earth Explorer satellite launched in 2025. It carries the first P-band synthetic aperture radar in orbit, whose long wavelength penetrates forest canopies to measure forest biomass, an important quantity for tracking the carbon cycle. My internship investigated whether the same data can be used to retrieve sea surface salinity.
 
-### What are you best at?
+### What are your main strengths?
 
-Taking a messy dataset, working out what's going on in it, and building tools in Python to handle it properly. I'm also good at explaining technical work to people who don't do it every day, from years of tutoring and outreach.
+Working through complex or imperfect datasets, understanding what is driving the results, and building reliable Python tools to process them. I also communicate technical work clearly, a skill developed through years of tutoring and outreach.
 
-### What are you learning at the moment?
+### What are you developing at the moment?
 
-Quite a lot. I'm working on new skills on my own time and would like a role where I keep learning, both on the technical side and from the people I work with.
+I am continuing to build my technical skills independently, and I am looking for a role that offers further learning, both technically and from experienced colleagues.
 
-### How do I get in touch?
+### How can I get in touch?
 
-{% assign cv_file = site.static_files | where: "path", "/cv.pdf" | first %}Email is best: [orlaithbdoyle@gmail.com](mailto:orlaithbdoyle@gmail.com).{% if cv_file %} My CV is [here](cv.pdf).{% endif %}
+{% assign cv_file = site.static_files | where: "path", "/cv.pdf" | first %}By email at [orlaithbdoyle@gmail.com](mailto:orlaithbdoyle@gmail.com).{% if cv_file %} My CV is available [here](cv.pdf).{% endif %}

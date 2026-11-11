@@ -5,29 +5,29 @@ title: About
 
 # About me
 
-My interest in space goes back to my teens, when I volunteered with Astronomy Ireland, setting up and running telescopes at public stargazing nights. That led to a BSc in Physics with Astronomy at DCU and then an MSc in Space Science and Technology at UCD.
+My interest in space began as a teenager volunteering with Astronomy Ireland, where I helped run telescopes at public observing nights. That interest led to a BSc in Physics with Astronomy at Dublin City University and an MSc in Space Science and Technology at University College Dublin.
 
 ![Orlaith in a space station module mockup, wearing an ESA top and lanyard](photos/esa-module.jpg)
 *Inside a space station module mockup during my ESA internship, 2026.*
 
-Remote sensing caught my interest during the MSc, radar especially, because it works through cloud and at night and there is still a lot to work out about what it can see. At ESTEC most of my days involved writing Python, reading papers, and trying to understand why a number looked wrong. Sometimes it was the physics and sometimes it was the file format.
+During the MSc I specialised in remote sensing, and in radar in particular. Radar observes through cloud and at night, and there is still a great deal to learn about what it can measure. At ESTEC my work combined Python development, reading the literature and careful checking of results; when a number looked wrong, the cause was as likely to be in the data format as in the physics.
 
-I like work where science and engineering meet, and I like explaining things. I've tutored physics and maths for a few years, coached children at my local GAA club, and helped school teams with their CanSat projects.
+I am most comfortable where science and engineering meet, and I enjoy explaining technical work clearly. I have tutored physics and mathematics for several years, coached young players at my local GAA club, and supported school teams through ESA's CanSat programme.
 
 ## Outside work
 
-From 2016 to 2019 I coached at Blessington GAA, first with the children in the club academy and then goalkeeper training for the under-12 girls. I went to an all-Irish secondary school, Coláiste Íosagáin, and I also tutor Irish.
+I was educated through Irish at Coláiste Íosagáin and continue to tutor the language. From 2016 to 2019 I coached at Blessington GAA, first with the club academy and later as goalkeeping coach for the under-12 girls.
 
-*Is féidir liom obair trí Ghaeilge freisin.* (I can work through Irish too.)
+*Is féidir liom obair trí Ghaeilge freisin.* (I am also able to work through Irish.)
 
-## A few more photos
+## Photos
 
 [![Orlaith reaching up to a large radio dish under a blue sky](photos/dish.jpg)](photos/dish.jpg)
 [![Orlaith in an astronaut photo board, waving](photos/astronaut.jpg)](photos/astronaut.jpg)
 [![Orlaith looking around a space station module exhibit](photos/module-exhibit.jpg)](photos/module-exhibit.jpg)
 
-*Click a photo to see it full size.*
+*Select a photo to view it at full size.*
 
 ## Skills
 
-My skills, and the projects where I used them, are on the [skills page](skills.html).
+A detailed list of my skills, with the projects in which I applied them, is on the [skills page](skills.html).

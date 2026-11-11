@@ -3,35 +3,35 @@
 photo: photo.jpg
 ---
 
-I'm a space science graduate from Ireland. I work with radar satellite data, mostly over the ocean.
+I am a space scientist from Ireland, working with radar satellite data, with a particular focus on the ocean.
 
-From May to October 2026 I was an intern at ESA's ESTEC centre in the Netherlands, on the Biomass mission. Biomass was built to measure forests, and I spent my time testing whether it could also measure how salty the sea is.
+From May to October 2026 I was an Earth observation intern at ESA's ESTEC centre in the Netherlands, on the Biomass mission. Biomass was designed to measure forest biomass; my work investigated whether its P-band radar data can also be used to retrieve sea surface salinity.
 
-Before that I did an MSc in Space Science and Technology at UCD and a BSc in Physics with Astronomy at DCU.
+I hold an MSc in Space Science and Technology from University College Dublin (First Class Honours) and a BSc in Physics with Astronomy from Dublin City University.
 
-{% assign cv_file = site.static_files | where: "path", "/cv.pdf" | first %}I'm looking for work in Earth observation, remote sensing or the space sector, in Ireland or elsewhere in Europe. The easiest way to reach me is [by email](mailto:orlaithbdoyle@gmail.com).{% if cv_file %} My [CV is here](cv.pdf).{% endif %}
+{% assign cv_file = site.static_files | where: "path", "/cv.pdf" | first %}I am seeking roles in Earth observation, remote sensing and the wider space sector, in Ireland or elsewhere in Europe. I can be reached [by email](mailto:orlaithbdoyle@gmail.com).{% if cv_file %} My [CV is available here](cv.pdf).{% endif %}
 
-If you're hiring, my [quick answers page](faq.html) covers availability, location and right to work.
+For recruiters, the [FAQ page](faq.html) covers availability, location and right to work.
 
 ## Selected work
 
 [Sea surface salinity from Biomass](projects.html#sea-surface-salinity-from-biomass)
-: A pipeline that turns Biomass P-band radar data into sea surface salinity. On the best scene it came within 0.4 psu of the GLORYS12 ocean model.
+: A retrieval pipeline that estimates sea surface salinity from Biomass P-band radar data. The best scene agreed with the GLORYS12 ocean reanalysis to within 0.4 psu.
 
 [Mapping everywhere Biomass has looked](projects.html#mapping-everywhere-biomass-has-looked)
-: Over 220,000 Biomass products reduced to about 5,000 unique places, each sorted into ocean, coast or land.
+: A scan of more than 220,000 Biomass products, reduced to around 5,000 unique locations and classified as ocean, coastal or land.
 
 [EIRSAT-1 mission test](projects.html#eirsat-1-mission-test)
-: Five live radio passes on the EIRSAT-1 FlatSat, including a recovery from safe mode.
+: Five live radio passes on the EIRSAT-1 FlatSat as part of an operations crew, including a recovery from safe mode.
 
 [SQRT high-altitude balloon](projects.html#sqrt-high-altitude-balloon)
-: Led a five-person team from design to a flight in the stratosphere.
+: Project manager for a five-person team, from design reviews through to a stratospheric flight.
 
 [See all projects](projects.html)
 
 ## Recently
 
-- Finished my internship on Biomass at ESA ESTEC (October 2026)
-- Put my internship code on [GitHub](https://github.com/orlaithdoyle/Biomass_ocean)
-- Finished my MSc at UCD, with my thesis on Biomass ocean salinity
-- Helped out at ESA's CanSat finals and visited Irish schools to talk about space
+- Completed my Earth observation internship on Biomass at ESA ESTEC (October 2026)
+- Published my internship code on [GitHub](https://github.com/orlaithdoyle/Biomass_ocean)
+- Graduated from UCD with an MSc in Space Science and Technology, First Class Honours
+- Provided technical support at ESA's CanSat event and visited Irish schools as part of ESA outreach

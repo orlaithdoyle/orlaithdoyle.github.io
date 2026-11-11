@@ -5,7 +5,7 @@ title: Projects
 
 # Projects
 
-Code for my ESA work is on [GitHub](https://github.com/orlaithdoyle/Biomass_ocean). Most projects below have the full report attached as a PDF.
+A selection of research, engineering and coursework projects. Code from my ESA work is on [GitHub](https://github.com/orlaithdoyle/Biomass_ocean), and full reports are attached as PDFs where available.
 
 <p class="topics">Jump to: <a href="#earth-observation-and-radar">Earth observation and radar</a> &nbsp;|&nbsp; <a href="#spacecraft-and-missions">Spacecraft and missions</a> &nbsp;|&nbsp; <a href="#physics-astronomy-and-planetary-science">Physics, astronomy and planetary science</a></p>
 
@@ -14,9 +14,9 @@ Code for my ESA work is on [GitHub](https://github.com/orlaithdoyle/Biomass_ocea
 ### Sea surface salinity from Biomass
 *ESA ESTEC and MSc thesis, 2026*
 
-Biomass is ESA's first P-band radar satellite. I built a pipeline that takes its Level 1 products, compares the HH and VV polarisations, corrects for wind roughening of the sea surface using ERA5, and converts the result to salinity using a dielectric model of seawater. I checked each scene against the SMOS satellite and the GLORYS12 ocean model. For the best scene, in the South Atlantic, my estimate came within 0.4 psu of GLORYS12.
+Biomass is ESA's first P-band SAR mission. I developed a pipeline that takes its Level 1 products, uses the ratio of the HH and VV polarisations, corrects for wind-driven surface roughness using ERA5, and inverts a seawater dielectric model to estimate salinity. Each scene was validated against SMOS and the GLORYS12 ocean reanalysis. For the best scene, in the South Atlantic, the retrieval agreed with GLORYS12 to within 0.4 psu.
 
-Along the way I found that one product format stored its image bands in the opposite order to its own metadata, which had been swapping HH and VV without anyone noticing.
+In the course of this work I identified that one product format stored its image bands in the reverse order to its own metadata, which had been silently swapping the HH and VV channels.
 
 ![HH-VV phase from Biomass beside SMOS salinity for the same swath at the Amazon mouth](photos/biomass-amazon-salinity.jpg)
 *Biomass HH-VV phase (left) against SMOS salinity along the same swath (middle) and the wider salinity field (right), Amazon mouth, July 2026.*
@@ -28,7 +28,7 @@ Along the way I found that one product format stored its image bands in the oppo
 ### Mapping everywhere Biomass has looked
 *ESA ESTEC, 2026*
 
-A script that works through the whole Biomass catalogue (over 220,000 products), finds the roughly 5,000 unique places imaged, and sorts them into ocean, coast and land. It made finding good ocean scenes much quicker. It can be stopped and restarted without losing progress, which mattered because a full run takes most of a day.
+A tool that scans the full Biomass catalogue (more than 220,000 products), identifies the roughly 5,000 unique locations imaged, and classifies each as ocean, coastal or land. It made selecting suitable ocean scenes far quicker. Because a full scan takes most of a day, it checkpoints its progress and resumes automatically after interruptions.
 
 ![World map of every Biomass swath, coloured by ocean, coast and land](photos/biomass-swath-map.jpg)
 *Every Biomass swath available during my internship: ocean in blue, coast in red, land in green.*
@@ -38,7 +38,7 @@ A script that works through the whole Biomass catalogue (over 220,000 products),
 ### An ocean front in the Pacific
 *ESA ESTEC, 2026*
 
-One patch of an equatorial Pacific scene behaved differently in the radar data. When I compared it with ocean model salinity and satellite sea temperature, there was a tongue of fresher water and a temperature front in the same spot, so it looks like a real ocean front.
+One region of an equatorial Pacific scene stood out in the radar coherence and polarimetric analysis. Comparison with ocean model salinity and satellite sea surface temperature showed a tongue of fresher water and a temperature front at the same location, indicating a genuine ocean front rather than an artefact.
 
 ![Sea surface temperature anomaly across the equatorial Pacific with Biomass swaths overlaid](photos/biomass-elnino-sst.jpg)
 *Biomass coverage over the 2026 El Niño warm tongue, on a sea surface temperature anomaly map.*
@@ -48,14 +48,14 @@ One patch of an equatorial Pacific scene behaved differently in the radar data. 
 ### HH-VV phase over the Amazon plume
 *ESA ESTEC, 2026*
 
-Looked at the phase difference between HH and VV radar returns off the mouth of the Amazon, how stable it was between repeat passes, and how it compared with SMOS and SMAP salinity.
+An analysis of the HH-VV phase difference off the mouth of the Amazon, examining its stability between repeat passes and comparing it with SMOS and SMAP salinity.
 
 **Tools:** Python, SMOS, SMAP
 
 ### Blessington Lakes from space
 *SAR and InSAR Remote Sensing module, UCD, 2026*
 
-The Blessington Lakes supply over half of Dublin's drinking water. I used SWOT to track the lake's water level through the year, compared it with local rainfall and gauge records, and used Sentinel-2 to look for signs of algae during low-water periods.
+The Blessington Lakes supply over half of Dublin's drinking water. I used SWOT to track the reservoir's water level over the year, compared it with local rainfall and gauge records, and used Sentinel-2 to assess algal activity during low-water periods.
 
 **Tools:** SWOT, Sentinel-2, Python, GIS
 
@@ -69,11 +69,11 @@ SAR analysis of the 2025 Myanmar earthquake; InSAR for volcanic deformation and 
 ## Spacecraft and missions
 
 ### SQRT high-altitude balloon
-*Satellite Systems module, UCD, 2025 to 2026*
+*Satellite Subsystems module, UCD, 2025 to 2026*
 
-I was project manager for SQRT, a five-person team that designed, built and flew a TupperSat payload on a stratospheric balloon launched from Armagh Observatory and Planetarium. The experiment was meant to release water into a vented chamber at around 35 mbar and watch it flash-evaporate, as a small-scale look at the vapour plumes on icy moons like Enceladus and Europa.
+I was project manager for SQRT, a five-person team that designed, built and flew a TupperSat payload on a stratospheric balloon launched from Armagh Observatory and Planetarium. The experiment was designed to release water into a vented chamber at around 35 mbar and observe its flash evaporation, as a small-scale analogue of the vapour plumes on icy moons such as Enceladus and Europa.
 
-The payload lost power before reaching the trigger altitude, so the evaporation itself didn't happen. Everything else worked: integration, launch, live telemetry, tracking and recovery. From the recovered data I rebuilt the flight's pressure, temperature, ascent and descent profiles and compared the real ground track with our prediction.
+The payload lost power before reaching the trigger altitude, so the evaporation stage did not take place. Integration, launch, live telemetry, tracking and recovery were all successful. Using the recovered data, I reconstructed the pressure, temperature, ascent and descent profiles of the flight and compared the actual ground track with our prediction.
 
 <div class="pair">
 <figure><img src="photos/sqrt-payload.jpg" alt="The SQRT payload in its red-lidded TupperSat box"><figcaption>The flight-ready SQRT payload.</figcaption></figure>
@@ -93,7 +93,7 @@ The payload lost power before reaching the trigger altitude, so the evaporation 
 ### EIRSAT-1 mission test
 *Spacecraft Operations module, UCD, 2026*
 
-As part of the BETA crew, I ran a mission test on the EIRSAT-1 FlatSat, the ground copy of Ireland's first satellite. Over five radio passes we rotated through operations roles, including Test Support Operator and Daily Pass Planner, using the real operations procedures. We downlinked and decoded housekeeping and payload telemetry, and when the spacecraft dropped into safe mode after a battery voltage drop, we worked through the recovery live.
+As part of the BETA crew, I carried out a mission test on the EIRSAT-1 FlatSat, the ground model of Ireland's first satellite. Over five radio passes the crew rotated through operational roles, including Test Support Operator and Daily Pass Planner, following the mission's operating procedures. We downlinked and decoded housekeeping and payload telemetry, and recovered the spacecraft in real time after a battery voltage drop sent it into safe mode.
 
 ![Ground station screens counting down to a pass](photos/eirsat1-ops.jpg)
 *Counting down to a pass during the mission test, April 2026.*
@@ -103,21 +103,21 @@ As part of the BETA crew, I ran a mission test on the EIRSAT-1 FlatSat, the grou
 ### TiNi: a gamma-ray mission concept
 *Space Mission Design Skills module, UCD, 2026*
 
-A mission concept for measuring radioactive nickel and titanium from Type Ia supernovae. Two spacecraft fly in formation: one carries a Laue lens that focuses gamma rays onto a cooled germanium detector on the other. The report covers the science case, requirements, instrument design and spacecraft design.
+A mission concept to measure radioactive nickel and titanium produced in Type Ia supernovae. Two spacecraft fly in formation: one carries a Laue lens that focuses gamma rays onto a cooled germanium detector on the other. The report covers the science case, requirements, instrument design and spacecraft design.
 
 **Read more:** [Mission design report (PDF, 0.7 MB)](files/Doyle_TiNi_Gamma-Ray_Mission_Design_2026.pdf)
 
 ### YPSat-2 valve mechanism
 *ESA ESTEC, 2026*
 
-Science justification and CAD work for a vein valve mechanism on ESA's young professionals satellite payload.
+Science justification and CAD design for a venous valve mechanism on ESA's young professionals satellite payload.
 
 ## Physics, astronomy and planetary science
 
 ### Comparing gamma-ray detectors
 *Space Detector Laboratory, UCD, 2026*
 
-A group lab comparing CdTe, NaI(Tl) and BGO detectors with radioactive sources. We fitted the photopeaks to calibrate each detector, measured energy resolution and efficiency, tested how the response changed off-axis, and looked at which detector suits which space instrument.
+A group laboratory study comparing CdTe, NaI(Tl) and BGO detectors using radioactive sources. We fitted photopeaks to calibrate each detector, measured energy resolution and efficiency, characterised the off-axis response, and assessed the suitability of each detector for different space instruments.
 
 **Tools:** Python, curve fitting, MAESTRO
 
@@ -126,7 +126,7 @@ A group lab comparing CdTe, NaI(Tl) and BGO detectors with radioactive sources. 
 ### Launch windows to Jupiter and beyond
 *BSc thesis, DCU, 2023*
 
-My final year project: modelling planetary orbits in Python with NASA JPL data, and working out the best launch windows for transfer orbits from Earth to Jupiter and the outer planets.
+Final year project: modelling planetary orbits in Python using NASA JPL ephemerides, and identifying optimal launch windows for transfer orbits from Earth to Jupiter and the outer planets.
 
 **Tools:** Python, NASA JPL ephemerides, orbital mechanics
 
@@ -135,7 +135,7 @@ My final year project: modelling planetary orbits in Python with NASA JPL data, 
 ### Titan and Earth: rivers and lakes
 *Planetary Geomorphology module, UCD, 2026*
 
-An essay comparing the rivers, lakes and deltas on Saturn's moon Titan with those on Earth, using Cassini-Huygens data. The landforms look almost the same, but they are carved by liquid methane over water ice, under different gravity and temperature.
+An essay comparing the rivers, lakes and deltas of Saturn's moon Titan with those on Earth, drawing on Cassini-Huygens data. The landforms are strikingly similar, despite being shaped by liquid methane over water ice, under very different gravity and temperature.
 
 **Read more:** [Essay (PDF, 0.7 MB)](files/Doyle_Titan_vs_Earth_Hydrology_2026.pdf)
 

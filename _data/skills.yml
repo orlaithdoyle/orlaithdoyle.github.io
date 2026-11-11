@@ -9,7 +9,7 @@ groups:
   - title: Earth observation and remote sensing
     skills:
       - name: SAR processing
-        what: Six months working with Biomass P-band Level 1 products. Reading GeoTIFF and annotation files, calibration checks, multilooking, speckle reduction and land masking across different acquisition geometries.
+        what: Six months of work with Biomass P-band Level 1 products: reading GeoTIFF and annotation files, calibration checks, multilooking, speckle reduction and land masking across differing acquisition geometries.
         used:
           - {label: Salinity from Biomass, link: /projects.html#sea-surface-salinity-from-biomass}
           - {label: Amazon plume, link: /projects.html#hh-vv-phase-over-the-amazon-plume}
@@ -23,7 +23,7 @@ groups:
         used:
           - {label: Salinity from Biomass, link: /projects.html#sea-surface-salinity-from-biomass}
       - name: Ocean surface physics
-        what: Wave spectra (Elfouhaily), two-scale Bragg scattering and how wind and swell roughen the sea surface, used to work out what was confusing the salinity signal.
+        what: Wave spectra (Elfouhaily), two-scale Bragg scattering and the effect of wind and swell on surface roughness, applied to identify what was masking the salinity signal.
         used:
           - {label: Pacific ocean front, link: /projects.html#an-ocean-front-in-the-pacific}
       - name: Ocean and atmosphere datasets
@@ -32,7 +32,7 @@ groups:
           - {label: Salinity from Biomass, link: /projects.html#sea-surface-salinity-from-biomass}
           - {label: Pacific ocean front, link: /projects.html#an-ocean-front-in-the-pacific}
       - name: Optical imagery and altimetry
-        what: Sentinel-2 for signs of algae and SWOT for lake water levels, compared with local rainfall and gauge records.
+        what: Sentinel-2 for algal activity and SWOT for reservoir water levels, compared with local rainfall and gauge records.
         used:
           - {label: Blessington Lakes, link: /projects.html#blessington-lakes-from-space}
       - name: InSAR and Sentinel-1
@@ -49,13 +49,13 @@ groups:
           - {label: Mapping the Biomass catalogue, link: /projects.html#mapping-everywhere-biomass-has-looked}
 
       - name: Cal/val site files
-        what: Built KML files of calibration and validation sites for my supervisor's team, labelled by project ID so they open cleanly in Google Earth.
+        what: Produced KML files of calibration and validation sites for my supervisor's team, labelled by project ID for use in Google Earth.
         used:
           - {label: Experience, link: /experience.html}
   - title: Programming and data
     skills:
       - name: Python for science
-        what: NumPy, xarray, SciPy, tifffile and lxml, written in Jupyter notebooks that can be rerun on a new scene by changing one cell.
+        what: NumPy, xarray, SciPy, tifffile and lxml, in Jupyter notebooks structured so that a new scene can be processed by editing a single configuration cell.
         used:
           - {label: Code on GitHub, link: "https://github.com/orlaithdoyle/Biomass_ocean"}
       - name: Data visualisation
@@ -63,7 +63,7 @@ groups:
         used:
           - {label: Poster, link: /files/Doyle_Biomass_Internship_Poster_2026.pdf}
       - name: Reliable pipelines
-        what: Long jobs that checkpoint their progress, reconnect after network errors and resume where they stopped, which mattered for an 8 to 11 hour catalogue scan.
+        what: Long-running jobs that checkpoint their progress, reconnect after network errors and resume automatically, as required for an eight to eleven hour catalogue scan.
         used:
           - {label: Mapping the Biomass catalogue, link: /projects.html#mapping-everywhere-biomass-has-looked}
       - name: Signal and data analysis
@@ -80,7 +80,7 @@ groups:
         used:
           - {label: SQRT balloon, link: /projects.html#sqrt-high-altitude-balloon}
       - name: Careful use of AI tools
-        what: Used ESA's LUNA assistant and Copilot for troubleshooting and tidying code, while writing the physics and analysis myself, and documented that use openly in my reports.
+        what: Used ESA's LUNA assistant and Microsoft Copilot for troubleshooting and code tidying, while developing the physics and analysis myself, and disclosed this use in my reports.
         used:
           - {label: Internship report, link: /files/Doyle_ESA_Biomass_Internship_Report_2026.pdf}
       - name: Version control and documents
@@ -111,19 +111,19 @@ groups:
         used:
           - {label: Gamma-ray detectors, link: /projects.html#comparing-gamma-ray-detectors}
       - name: Planetary and astrophysics background
-        what: Comparing Titan's methane rivers and lakes with Earth's using Cassini-Huygens data, and the gamma-ray signatures of Type Ia supernovae.
+        what: Comparative planetary hydrology of Titan and Earth using Cassini-Huygens data, and the gamma-ray signatures of Type Ia supernovae.
         used:
           - {label: Titan and Earth, link: /projects.html#titan-and-earth-rivers-and-lakes}
           - {label: TiNi mission concept, link: /projects.html#tini-a-gamma-ray-mission-concept}
       - name: CAD
-        what: Contributing to the design of a valve mechanism for a satellite payload.
+        what: Contributed to the design of a valve mechanism for a satellite payload.
         used:
           - {label: YPSat-2 valve, link: /projects.html#ypsat-2-valve-mechanism}
 
   - title: Working with people
     skills:
       - name: Project management
-        what: Led a five-person team through planning, design reviews, build and flight, keeping the schedule and documents on track.
+        what: Led a five-person team through planning, design reviews, build and flight, managing the schedule and project documentation.
         used:
           - {label: SQRT balloon, link: /projects.html#sqrt-high-altitude-balloon}
       - name: Technical writing
@@ -131,16 +131,16 @@ groups:
         used:
           - {label: Projects, link: /projects.html}
       - name: Presenting
-        what: A0 poster at the UCD poster session, our team's flight acceptance review, a Blessington Lakes talk, and talks to school groups.
+        what: An A0 research poster at the UCD poster session, our team's flight acceptance review, a remote sensing presentation on the Blessington Lakes, and talks to school groups.
         used:
           - {label: Poster, link: /files/Doyle_Biomass_Internship_Poster_2026.pdf}
           - {label: SQRT review slides, link: /files/sqrt/SQRT_Flight_Acceptance_Review_Slides.pdf}
       - name: Working in an international team
-        what: Six months in ESA's Earth Observation department at ESTEC, with weekly Biomass training from DLR, and on a cross-team young professionals payload.
+        what: Six months in ESA's Earth Observation department at ESTEC, including weekly Biomass training from DLR, alongside a cross-team young professionals payload project.
         used:
           - {label: Experience, link: /experience.html}
       - name: Teaching and outreach
-        what: Running my own physics and maths tutoring since 2024, ESA school visits and technical support at CanSat.
+        what: Running my own physics and mathematics tutoring practice since 2024, ESA school visits and technical support at CanSat.
         used:
           - {label: Volunteering, link: /volunteering.html}
           - {label: Experience, link: /experience.html}

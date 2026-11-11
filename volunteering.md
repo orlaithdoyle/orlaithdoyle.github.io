@@ -4,27 +4,27 @@ title: Volunteering
 
 # Volunteering
 
-### ESA CanSat, technical support
+### Technical Expert, ESA CanSat
 *ESTEC, 2026*
 
-Helped secondary school teams at the CanSat finals with payload, power and communications.
+Supported secondary school teams at the European CanSat event with the design of their payload, power and communications subsystems.
 
 <!--
 ![CanSat event at ESTEC](photos/cansat.jpg)
 *CanSat at ESTEC.*
 -->
 
-### ESA school outreach
+### ESA School Outreach
 *Ireland, 2026*
 
-A week visiting Irish schools to talk about space and ESA.
+A week of visits to Irish schools on behalf of ESA, speaking about space science and careers in the space sector.
 
-### Youth coach, Blessington GAA
+### Youth Coach, Blessington GAA
 *2016 to 2019*
 
-Weekly sessions with young children at the club academy, then goalkeeper training for the under-12 girls.
+Ran weekly sessions with young children in the club academy, and later coached goalkeeping for the under-12 girls' team.
 
-### Astronomy Ireland
+### Volunteer, Astronomy Ireland
 *2016 to 2018*
 
-Set up and ran telescopes at public stargazing nights.
+Set up and operated telescopes at public observing nights.

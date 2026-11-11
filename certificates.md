@@ -5,12 +5,12 @@ description: "Certificates and licences held by Orlaith Doyle."
 
 # Certificates
 
-Licences, certificates and courses. Copies of any of these are available on request.
+Licences, certificates and completed courses. Copies are available on request.
 
 ### EU drone operator and remote pilot (A1/A3)
 *Open category, EU drone regulations*
 
-Registered drone operator, and certified to fly in the A1 and A3 open subcategories.
+Registered drone operator, certified to fly in the A1 and A3 open subcategories.
 
 ### Full driving licence
 *Ireland*
