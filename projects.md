@@ -96,9 +96,26 @@ An essay comparing the rivers, lakes and deltas on Saturn's moon Titan with thos
 **Read more:** [Essay (PDF, 0.7 MB)](files/Doyle_Titan_vs_Earth_Hydrology_2026.pdf)
 
 ### SQRT high-altitude balloon
-*UCD, 2025 to 2026*
+*Satellite Systems module, UCD, 2025 to 2026*
 
-Project manager for a five-person team that designed, built and flew a payload to the stratosphere.
+I was project manager for SQRT, a five-person team that designed, built and flew a TupperSat payload on a stratospheric balloon launched from Armagh Observatory and Planetarium. The experiment was meant to release water into a vented chamber at around 35 mbar and watch it flash-evaporate, as a small-scale look at the vapour plumes on icy moons like Enceladus and Europa.
+
+The payload lost power before reaching the trigger altitude, so the evaporation itself didn't happen. Everything else worked: integration, launch, live telemetry, tracking and recovery. From the recovered data I rebuilt the flight's pressure, temperature, ascent and descent profiles and compared the real ground track with our prediction.
+
+<div class="pair">
+<figure><img src="photos/sqrt-payload.jpg" alt="The SQRT payload in its red-lidded TupperSat box"><figcaption>The flight-ready SQRT payload.</figcaption></figure>
+<figure><img src="photos/sqrt-groundtrack.jpg" alt="Map comparing the predicted and actual balloon ground track from Armagh"><figcaption>Predicted path (blue) against the real ground track (red).</figcaption></figure>
+</div>
+
+**Tools:** Raspberry Pi Pico, MicroPython, Python, GPS telemetry, balloon trajectory prediction
+
+**Read more:** [My flight analysis and reflection (PDF, 2.4 MB)](files/Doyle_SQRT_Flight_Analysis_and_Reflection_2026.pdf)
+
+**Team documents** (co-written with Javier Ayuso, Caimin Keavney, Bruce Ritter and Elyana Abdallah):
+
+- Preliminary Design Review: [Mission Description](files/sqrt/SQRT_PDR_Mission_Description.pdf), [Design Justification](files/sqrt/SQRT_PDR_Design_Justification.pdf), [Systems Engineering Plan](files/sqrt/SQRT_PDR_Systems_Engineering_Plan.pdf), [Project Management Plan](files/sqrt/SQRT_PDR_Project_Management_Plan.pdf)
+- Critical Design Review: [Project Management Plan](files/sqrt/SQRT_CDR_Project_Management_Plan.pdf), [Systems Engineering Plan](files/sqrt/SQRT_CDR_Systems_Engineering_Plan.pdf), [Hardware Design](files/sqrt/SQRT_CDR_Hardware_Design.pdf), [Software Design](files/sqrt/SQRT_CDR_Software_Design.pdf), [Verification Plan](files/sqrt/SQRT_CDR_Verification_Plan.pdf), [Flight Test Plan](files/sqrt/SQRT_CDR_Flight_Test_Plan.pdf), [Data Management Plan](files/sqrt/SQRT_CDR_Data_Management_Plan.pdf)
+- Flight Acceptance Review: [Operations and User Manual](files/sqrt/SQRT_Operations_and_User_Manual.pdf), [Review slides](files/sqrt/SQRT_Flight_Acceptance_Review_Slides.pdf)
 
 ### Other coursework
 *UCD, 2025 to 2026*
