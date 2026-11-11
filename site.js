@@ -86,20 +86,6 @@
     ctx.clearRect(0, 0, W, H);
     var INK = '232,226,246';                       // off-white "ink" for lines
 
-    // Background: a faint map frame, like a georeferenced image, with coordinate labels
-    var cols = 12, rows = 6, gx0 = W * 0.03, gx1 = W * 0.97, gy0 = H * 0.06, gy1 = H * 0.94;
-    ctx.strokeStyle = 'rgba(' + INK + ',0.06)'; ctx.lineWidth = 1 * dpr;
-    ctx.beginPath();
-    for (var gi = 0; gi <= cols; gi++) { var xx = gx0 + (gx1 - gx0) * gi / cols; ctx.moveTo(xx, gy0); ctx.lineTo(xx, gy1); }
-    for (var gj = 0; gj <= rows; gj++) { var yy = gy0 + (gy1 - gy0) * gj / rows; ctx.moveTo(gx0, yy); ctx.lineTo(gx1, yy); }
-    ctx.stroke();
-    ctx.strokeStyle = 'rgba(' + INK + ',0.14)'; ctx.strokeRect(gx0, gy0, gx1 - gx0, gy1 - gy0);
-    ctx.fillStyle = 'rgba(' + INK + ',0.28)'; ctx.font = (9 * dpr) + 'px Jost, sans-serif';
-    var latL = ['90°N', '60°N', '30°N', '0°', '30°S', '60°S', '90°S'];
-    for (gj = 1; gj < rows; gj++) ctx.fillText(latL[gj], gx0 + 4 * dpr, gy0 + (gy1 - gy0) * gj / rows - 3 * dpr);
-    var lonL = ['180°', '120°W', '60°W', '0°', '60°E', '120°E', '180°'];
-    for (gi = 2; gi < cols; gi += 2) ctx.fillText(lonL[gi / 2], gx0 + (gx1 - gx0) * gi / cols + 3 * dpr, gy1 - 4 * dpr);
-
     // outline of the planet, like a diagram
     ctx.strokeStyle = 'rgba(' + INK + ',0.18)'; ctx.lineWidth = 1 * dpr;
     ctx.beginPath(); ctx.arc(cx, cy, R * 1.01, 0, 6.283); ctx.stroke();
