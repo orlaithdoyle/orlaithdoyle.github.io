@@ -287,4 +287,4 @@ main dl.skill-entries dd{margin:0;padding-left:0;border-left:0;color:var(--text)
 
 /* name initials matching the logo */
 .moon-o{width:.74em;height:.74em;vertical-align:-.02em;margin-right:.02em}
-.gold-d{background:linear-gradient(160deg,#fbe7b0 0%,#eabf63 45%,#d4a24a 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.moon-d{width:.57em;height:.7em;vertical-align:0;margin:0 .03em 0 .05em}
