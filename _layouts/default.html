@@ -43,7 +43,10 @@
   <p class="name"><a href="{{ '/' | relative_url }}">{{ site.name }}</a></p>
   <p class="irish">{{ site.irish_name }}</p>
   {% if site.tagline != "" %}<p class="tagline">{{ site.tagline }}</p>{% endif %}
-  <p class="status">{{ site.status }}</p>
+  <a class="status-cta" href="mailto:{{ site.email }}?subject=Opportunity%20for%20Orlaith%20Doyle">
+    <span class="status">{{ site.status }}</span>
+    <span class="status-action">{{ site.status_action }}</span>
+  </a>
   <nav aria-label="Main">
     {%- for item in site.menu -%}
       {%- if item.children -%}

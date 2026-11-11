@@ -255,3 +255,12 @@ main h2[id]{scroll-margin-top:1rem}
 
 .affil{font-size:.95rem;letter-spacing:.03em;color:var(--faded);border-top:1px solid var(--lines);border-bottom:1px solid var(--lines);padding:.7rem 0;margin:1.6rem 0 .4rem;text-align:center}
 main img{max-height:30rem;width:auto;max-width:100%}
+
+/* Availability call to action in the sidebar */
+.status-cta{display:block;margin:1.1rem 0 0;padding:.7rem .9rem;border:1px solid rgba(234,191,99,.55);border-radius:8px;text-decoration:none;background:rgba(234,191,99,.06);transition:background .15s,border-color .15s}
+.status-cta .status{margin:0;font-size:.85rem;color:var(--text)}
+.status-action{display:block;margin-top:.35rem;font-size:1rem;font-weight:600;color:var(--links)}
+.status-action::after{content:"";display:inline-block;width:.42rem;height:.42rem;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor;transform:rotate(45deg);margin-left:.5rem;vertical-align:.1rem}
+.status-cta:hover{background:rgba(234,191,99,.14);border-color:var(--links)}
+@media (max-width:860px){.status-cta{display:inline-block}}
+@media (prefers-reduced-motion:reduce){.status-cta{transition:none}}

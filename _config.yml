@@ -14,6 +14,7 @@ description: Space science graduate working with radar satellite data and ocean 
 # The short line under your name, and the note under that.
 tagline: ""
 status: Available for new roles
+status_action: Let's talk
 
 # The animated globe at the top of the home page. Change to false to hide it.
 orb: true
