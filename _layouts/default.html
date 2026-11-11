@@ -52,8 +52,6 @@
   </div>
 </aside>
 <main>
-{% if page.url == "/" and site.orb %}<figure class="orb-fig"><canvas class="orb" id="orb" aria-hidden="true"></canvas></figure>{% endif %}
-{% if page.photo %}<img class="portrait" src="{{ page.photo | relative_url }}" alt="Photo of {{ site.name }}">{% endif %}
 {{ content }}
 <footer>{{ site.name }} &nbsp;/&nbsp; <a href="mailto:{{ site.email }}">{{ site.email }}</a> &nbsp;/&nbsp; Last updated {{ site.time | date: "%B %Y" }}</footer>
 </main>
