@@ -284,3 +284,7 @@ main dl.skill-entries dd{margin:0;padding-left:0;border-left:0;color:var(--text)
 /* Keep the availability line on one line and give it more weight */
 .status-cta{padding:.75rem .85rem}
 .status-cta .status{white-space:nowrap;font-size:.9rem;font-weight:500;color:#fff;gap:.45rem}
+
+/* name initials matching the logo */
+.moon-o{width:.74em;height:.74em;vertical-align:-.02em;margin-right:.02em}
+.gold-d{background:linear-gradient(160deg,#fbe7b0 0%,#eabf63 45%,#d4a24a 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
