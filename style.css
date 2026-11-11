@@ -267,19 +267,16 @@ main img{max-height:30rem;width:auto;max-width:100%}
 /* Slide galleries: keep slides in their wide 16:9 shape */
 main p:has(> a + a > img[src*="slide-"]) img{aspect-ratio:16/9;object-fit:cover;object-position:top}
 
-/* ---- Skills page, card layout ---- */
-.toolbox{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4rem 2rem;border:1px solid var(--lines);border-radius:10px;padding:1.3rem 1.4rem;margin:1.4rem 0 .6rem;background:rgba(255,255,255,.02)}
-.toolbox-title{display:block;font-weight:600;color:#fff;text-decoration:none;margin-bottom:.55rem;font-size:1rem}
-.toolbox-title:hover{color:var(--links)}
-ul.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
-ul.tags li{padding:.18rem .6rem;margin:0;font-size:.85rem;color:var(--text);border:1px solid var(--lines);border-radius:999px;background:rgba(255,255,255,.03)}
-ul.tags li::before{display:none}
-.skill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
-.skill-card{border:1px solid var(--lines);border-radius:10px;padding:1rem 1.15rem 1.05rem;background:rgba(255,255,255,.02);display:flex;flex-direction:column}
-.skill-card .skill-card-name{font-size:1.05rem;margin:0 0 .4rem;color:#fff}
-.skill-card-what{font-size:.95rem;line-height:1.55;margin:0 0 .7rem;color:var(--text);flex:1}
-.skill-card-used{margin:0;display:flex;flex-wrap:wrap;gap:.35rem}
-.skill-card-used a{font-size:.8rem;text-decoration:none;color:var(--links);border:1px solid rgba(234,191,99,.45);border-radius:999px;padding:.12rem .55rem}
-.skill-card-used a:hover{background:rgba(234,191,99,.12)}
-main h2[id]{scroll-margin-top:1rem}
-@media (max-width:860px){.toolbox,.skill-grid{grid-template-columns:1fr}}
+
+/* ---- Skills page, academic CV style ---- */
+table.skills-summary{margin:1.2rem 0 .5rem}
+table.skills-summary th{width:15rem;font-weight:600;vertical-align:top;border-bottom:1px solid var(--lines);padding:.55rem 1.2rem .55rem 0}
+table.skills-summary th a{color:#fff;text-decoration:none}
+table.skills-summary th a:hover{color:var(--links)}
+table.skills-summary td{color:var(--text);font-size:.97rem}
+dl.skill-entries{margin:0}
+main dl.skill-entries dt{font-weight:600;color:#fff;font-size:1.04rem;margin:1.2rem 0 .2rem;padding-left:0;border-left:0}
+main dl.skill-entries dt:first-child{margin-top:.6rem}
+main dl.skill-entries dd{margin:0;padding-left:0;border-left:0;color:var(--text);font-size:.98rem;line-height:1.6;max-width:none}
+.skill-ref{color:var(--faded);font-size:.92rem}
+@media (max-width:600px){table.skills-summary th{width:auto;border-bottom:0;padding-bottom:0}}

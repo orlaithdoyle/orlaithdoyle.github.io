@@ -5,28 +5,24 @@ description: "Skills of Orlaith Doyle: SAR and radar remote sensing, Python and 
 
 <h1>Skills</h1>
 
-<p>My technical and professional skills, with the projects in which I applied them.</p>
+<p>A summary of my technical and professional skills. Each entry notes the projects in which I applied it.</p>
 
-<div class="toolbox">
-{%- for g in site.data.skills.groups -%}
-  <div class="toolbox-col">
-    <a class="toolbox-title" href="#{{ g.title | slugify }}">{{ g.title }}</a>
-    <ul class="tags">{% for t in g.tools %}<li>{{ t }}</li>{% endfor %}</ul>
-  </div>
-{%- endfor -%}
-</div>
+<table class="skills-summary">
+  <tbody>
+  {%- for g in site.data.skills.groups -%}
+    <tr><th scope="row"><a href="#{{ g.title | slugify }}">{{ g.title }}</a></th><td>{{ g.tools | join: ", " }}</td></tr>
+  {%- endfor -%}
+  </tbody>
+</table>
 
 {% for g in site.data.skills.groups %}
 <h2 id="{{ g.title | slugify }}">{{ g.title }}</h2>
-<div class="skill-grid">
+<dl class="skill-entries">
 {%- for s in g.skills -%}
-  <div class="skill-card">
-    <h3 class="skill-card-name">{{ s.name }}</h3>
-    <p class="skill-card-what">{{ s.what }}</p>
-    {%- if s.used.size > 0 -%}<p class="skill-card-used">{% for u in s.used %}<a href="{{ u.link | relative_url }}">{{ u.label }}</a>{% endfor %}</p>{%- endif -%}
-  </div>
+  <dt>{{ s.name }}</dt>
+  <dd>{{ s.what }}{% if s.used.size > 0 %} <span class="skill-ref">({% for u in s.used %}<a href="{{ u.link | relative_url }}">{{ u.label }}</a>{% unless forloop.last %}; {% endunless %}{% endfor %})</span>{% endif %}</dd>
 {%- endfor -%}
-</div>
+</dl>
 {% endfor %}
 
-<p class="legend-note">Licences: EU drone operator and remote pilot (A1/A3) and a full driving licence. See <a href="{{ '/certificates.html' | relative_url }}">Certificates</a>.</p>
+<p class="legend-note">Licences: EU drone operator and remote pilot (A1/A3); full driving licence. See <a href="{{ '/certificates.html' | relative_url }}">Certificates</a>.</p>
