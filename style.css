@@ -226,3 +226,21 @@ main td:nth-child(3),main td:nth-child(4),main th:nth-child(3),main th:nth-child
   .navgroup .sub a{padding:.3rem 0;border:0}
 }
 @media (prefers-reduced-motion:reduce){.navgroup .caret{transition:none}}
+
+/* ---- Skills page ---- */
+.legend{display:grid;grid-template-columns:auto 1fr;gap:.45rem 1rem;align-items:center;font-size:.95rem;color:var(--faded);
+  border:1px solid var(--lines);border-radius:8px;padding:.9rem 1.1rem;margin:0 0 1rem;max-width:none}
+.legend-text{line-height:1.4}
+.lvl{display:inline-block;font-size:.78rem;font-weight:500;letter-spacing:.02em;padding:.12rem .55rem;border-radius:999px;white-space:nowrap;justify-self:start;border:1px solid}
+.lvl-experienced{color:#1b1530;background:#eabf63;border-color:#eabf63}
+.lvl-working-knowledge{color:#eabf63;border-color:rgba(234,191,99,.7);background:transparent}
+.lvl-introductory{color:var(--faded);border-color:var(--lines);background:transparent}
+.skill-list{display:block}
+.skill{display:grid;grid-template-columns:13rem minmax(0,1fr);gap:.2rem 1.6rem;padding:1rem 0 1.05rem;border-top:1px solid var(--lines)}
+.skill:first-child{border-top:0}
+.skill-head{display:flex;flex-direction:column;align-items:flex-start;gap:.4rem;grid-row:span 2}
+.skill-name{font-weight:600;color:#fff;font-size:1.06rem;line-height:1.3}
+.skill-what{font-size:.96rem;line-height:1.55;margin:0 0 .4rem;color:var(--text)}
+.skill-used{font-size:.88rem;color:var(--faded);margin:0}
+.legend-note{font-size:.95rem;color:var(--faded);margin-top:2rem}
+@media (max-width:860px){.skill{grid-template-columns:1fr}.skill-head{flex-direction:row;justify-content:space-between;align-items:center;grid-row:auto}}
