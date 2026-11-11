@@ -8,6 +8,8 @@ title: Education
 ### MSc Space Science and Technology
 *University College Dublin, 2025 to 2026*
 
+First Class Honours (GPA 3.71). Highest grade: A+ in Spacecraft Operations.
+
 Thesis on sea surface salinity from Biomass P-band SAR, done at ESA ESTEC: [read the report (PDF)](files/Doyle_ESA_Biomass_Internship_Report_2026.pdf) or [see the poster (PDF)](files/Doyle_Biomass_Internship_Poster_2026.pdf). Modules included remote sensing (SAR, InSAR, polarimetry), satellite subsystems, space mission design and geophysics.
 
 ### BSc Physics with Astronomy
