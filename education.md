@@ -19,3 +19,5 @@ Second Class Honours, Grade 1. Final year thesis (81%, a first-class mark) on mo
 
 ![Graduating from DCU with classmates](photos/dcu-graduation.jpg)
 *Graduation day at DCU, featured in the Irish Independent. Photo: Kyran O'Brien, DCU Communications Office.*
+
+A full list of my modules and grades is on my [transcript page](transcript.html).

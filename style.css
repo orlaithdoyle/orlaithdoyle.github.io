@@ -200,3 +200,11 @@ h2,h3,.name,strong,main dl dt{font-weight:600}
 .pair img{width:100%;height:auto;max-height:26rem;object-fit:contain;margin:0;border:1px solid var(--lines);border-radius:4px;background:#fff}
 .pair figcaption{font-size:.9rem;font-style:italic;color:var(--faded);margin-top:.35rem}
 @media (max-width:600px){.pair{grid-template-columns:1fr}}
+
+/* Tables (transcript) */
+main table{width:100%;border-collapse:collapse;margin:.4rem 0 1.6rem;font-size:.98rem}
+main th{text-align:left;font-weight:600;color:#fff;border-bottom:1px solid rgba(234,191,99,.5);padding:.4rem .6rem .4rem 0}
+main td{border-bottom:1px solid var(--lines);padding:.38rem .6rem .38rem 0;color:var(--text)}
+main td:nth-child(1){color:var(--faded);white-space:nowrap;width:6.5rem}
+main td:nth-child(3),main td:nth-child(4),main th:nth-child(3),main th:nth-child(4){text-align:right;white-space:nowrap;width:5rem}
+@media (max-width:600px){main td:nth-child(1),main th:nth-child(1){display:none}}
