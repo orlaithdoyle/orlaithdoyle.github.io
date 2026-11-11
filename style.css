@@ -11,13 +11,13 @@
   --accent:#e0ad45;       /* gold: menu marker, title underline, bullets, buttons */
   --glow:#e04dff;         /* magenta highlights */
   --lines:rgba(185,130,255,.20);    /* thin lines and panel edges */
-  --font:"Times New Roman", Times, serif;   /* was "Arvo", Georgia, serif */
+  --font:"Jost", "Futura", "Century Gothic", sans-serif;   /* was "Times New Roman", Times, serif */
 }
 
 /* ---- You shouldn't need to change anything below ---- */
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background-color:var(--background);color:var(--text);font-family:var(--font);font-size:1.12rem;line-height:1.65}
+body{margin:0;background-color:var(--background);color:var(--text);font-family:var(--font);font-size:1.04rem;line-height:1.7}
 a{color:var(--links);text-decoration-thickness:1px;text-underline-offset:.2em}
 a:hover{color:var(--text)}
 a:focus-visible{outline:2px solid var(--links);outline-offset:3px;border-radius:2px}
@@ -187,3 +187,8 @@ main dl dt:first-child{margin-top:.4rem}
 main dl dt a{color:#fff;text-decoration:none}
 main dl dt a:hover{color:var(--links);text-decoration:underline}
 main dl dd{margin:0;padding-left:1.12rem;color:var(--faded);font-size:1.02rem;line-height:1.55;max-width:60ch}
+
+/* Jost: lighter, more even weights read better than heavy bold */
+h1{font-weight:500;letter-spacing:-.01em}
+h2,h3,.name,strong,main dl dt{font-weight:600}
+.name{letter-spacing:0}
